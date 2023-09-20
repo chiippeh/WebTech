@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HamRat University - where leaders yearn</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Condensed">
     <style>
         nav a {
             text-decoration: none;
             color: #fff;
             display: inline;
         }
-        
+
         .nav-elements-container {
             margin: auto;
             width: 50%;
@@ -38,12 +38,13 @@
             border: 2px solid #000;
             border-radius: 10px;
             box-shadow: 4px 4px 5px rgba(50, 50, 50, 0.75);
-            background:  #F2E6FF;
-            font-size:20px;
-            padding:5px;
+            background: #F2E6FF;
+            font-size: 20px;
+            padding: 5px;
         }
     </style>
 </head>
+
 <body>
     <header style="background-color: #6f2079;" width=100% style="font-family: Arial, Helvetica, sans-serif;">
         <div class="center" style="color:#fff">
@@ -77,12 +78,34 @@
     </nav>
     <br>
     <main class="center">
-        
+        <form action="#">
+            <label for="date">Meal date</label><br>
+            <input type="date" id="date" name="date" ><br><br>
+            <label for="balance_one">Meal Balance for Semester 1</label><br>
+            <input type="number" id="balance_one" name="balance_one" value="69.42" readonly><br><br>
+            <label for="balance_two">Meal Balance for Semester 2</label><br>
+            <input type="number" id="balance_two" name="balance_two" value="420.69" readonly>
+            <br><br>
+        </form>
+        <br>
+        <div class="bubble">
+            <p><strong>BREAKFAST:</strong> Lightly-expired ham Sandwhich</p>
+        </div><br>
+        <div class="bubble">
+            <p><strong>LUNCH:</strong> Medium-rare Chicken with Kale</p>
+        </div><br>
+        <div class="bubble">
+            <p><strong>DINNER:</strong> Unbooked</p>
+        </div><br>
+        <form>
+            <input type="submit" name="submit" value="Submit">
+        </form><br><br>
+        <p>For comments, questions, suggestions, please contact the CTO directly, and include your phone number.</p>
     </main>
     <footer width=100%>
         <div style="background-color: #6f2079;">
-            <p class="center" style="color: #fff;">HAMRAT UNIVERSITY<br>Where Leaders Yearn</p> 
-            
+            <p class="center" style="color: #fff;">HAMRAT UNIVERSITY<br>Where Leaders Yearn</p>
+
         </div>
         <div style="background-color:#3b3b3b">
             <p class="center" style="color: rgb(87, 87, 245);">&copy 2023 - loss Inc. <br> g21j5408@campus.ru.ac.za,
@@ -90,4 +113,5 @@
         </div>
     </footer>
 </body>
+
 </html>
