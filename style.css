@@ -1,6 +1,6 @@
 
 :root {
-    --header-height: 5%;
+    --header-height: 6%;
     --nav-height: 5%; 
     --footer-height: 10%;   
     /* --top-footer-height: 10%;
@@ -30,6 +30,8 @@ header {
 
 #header-container * {
     display: inline;
+    top:30%;
+    position: relative;
 }
 
 nav {
@@ -46,33 +48,30 @@ nav {
 
 .nav-elements-container {
     margin: auto;
-    width: 50%;
+    width: 50vw;
     height: 100%;
     /* padding: 10px; */
 }
 
 nav a {
-    float: left;
+    display: inline-block;
     text-decoration: none;
     height: 100%;
+    width: 19%;
     text-align: center;
-    padding: 5px;
-    margin: 0 15px 0 0;
-    /* display: inline; */
-}
+    /* padding: 1.5vh 0.5vw 0 0.5vw; */
+    padding: 1.5vh 0 0 0;
 
-
-.nav-element {
-    align-content: center;
-    padding: 9px 0 0 0 ;
     color: #ffff;
-    
-    /* display: inline; */
-    /* height: 5em; */
 }
+
 
 .current-nav {
     background-color: #767676;
+}
+
+.sidebar {
+    border: yellow 2px solid;
 }
 
 main {
@@ -95,6 +94,7 @@ main {
 .center { 
     margin: auto;
     width: 50%;
+    height: 100%;
     /* padding: 10px; */
 }
 
@@ -133,10 +133,7 @@ main {
 /* ----------------- about.html ---------------------- */
 
 footer {
-    height: var(--footer-height);
-    /* height: 20%; */
-    border: green 3px solid;
-    /* right: 0; */
+    height: auto;
 }
 
 #top-footer {
@@ -148,7 +145,6 @@ footer {
 #bottom-footer {
     background-color:#3b3b3b;
     color: #5757f5;
-    height: 50%;
     /* height: var(--bottom-footer-height); */
 }
 
@@ -157,3 +153,42 @@ footer {
 .nav-elements-container a:hover {
     background-color: #767676;
 }
+
+/* ----------------- psuedo---------------------- */
+
+@media only screen and (max-width: 1010px) {
+    /* .nav-elements-container {
+        display: none;
+    }
+
+    .sidebar {
+        display: block;
+    } */
+    nav {
+        left:0;
+        width: 25%;
+        height: 100%;
+        position: fixed;
+    }
+    .current-nav{
+    }
+    .nav-elements-container{
+        width: 100%;
+    }
+    
+    nav a {
+        display: block;
+        height: 10%;
+        width: 100%;
+    }
+    body{
+        margin-left:25%;
+    }
+    #main-container{
+        width: 90%;
+    }
+    #header-container{
+        width: auto;
+        text-align: right;
+    }
+  }
