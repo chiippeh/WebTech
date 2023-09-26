@@ -1,10 +1,20 @@
 
+:root {
+    --header-height: 5%;
+    --nav-height: 5%; 
+    --footer-height: 10%;   
+    /* --top-footer-height: 10%;
+    --bottom-footer-height: 10%; */
+  }
+  
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-body {
+html, body {
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -15,6 +25,7 @@ header {
     width: 100%;
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     color:#fff;
+    height: var(--header-height);
 }
 
 #header-container * {
@@ -23,54 +34,126 @@ header {
 
 nav {
     background-color:#3b3b3b;
-}
-
-nav a {
-    text-decoration: none;
-    color: #fff;
-    display: inline;
+    height: var(--nav-height);
+    position: sticky;
+    top: 0;
+    right: 0;
+    background-color: #333; /* Set your desired background color */
+    /* padding: 10px;  */
+    z-index: 1000; /* Ensure it's above other elements */
+    color: #ffff;
 }
 
 .nav-elements-container {
     margin: auto;
     width: 50%;
-    padding: 10px;
+    height: 100%;
+    /* padding: 10px; */
 }
 
+nav a {
+    float: left;
+    text-decoration: none;
+    height: 100%;
+    text-align: center;
+    padding: 5px;
+    margin: 0 15px 0 0;
+    /* display: inline; */
+}
+
+
 .nav-element {
-    display: inline;
-    height: 5em;
+    align-content: center;
+    padding: 9px 0 0 0 ;
+    color: #ffff;
+    
+    /* display: inline; */
+    /* height: 5em; */
+}
+
+.current-nav {
+    background-color: #767676;
 }
 
 main {
+    flex: 1; /* flex-grow: 1 flex:shrink flex:basis; */
+    padding: 2em 0 2em 0;
+}
+
+#main-container {
     display: flex;
     flex-direction: column;
+    /* overflow-y: scroll; */
+    /* display: inline-block; */
+    margin: auto;
+    width: 50%;
+    /* height: 100%; */
+    border: green 2px solid;
 }
 
 /* Generic center align element  */
 .center { 
     margin: auto;
     width: 50%;
-    padding: 10px;
+    /* padding: 10px; */
 }
 
 .dashboard {
     border: 2px solid #000;
     border-radius: 10px;
-    box-shadow: 4px 4px 5px rgba(50, 50, 50, 0.75);
-    background: rgb(255, 255, 204);
+    box-shadow: 4px 4px 5px #323232;
+    background: #ffffcc;
     font-size:20px;
     padding:5px;
+    height: 33.33%;
+}
 
-    height: 50%;
+.bubble {
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 4px 4px 5px #323232;
+    background:  #F2E6FF;
+    font-size:20px;
+    /* padding:5px; */
+}
+
+/* ----------------- bookings.html ---------------------- */
+#bookings-list {
+    list-style-type: none; 
+    font-size:20px;
+    /* padding:5px; */
+}
+/* ----------------- bookings.html ---------------------- */
+
+
+/* ----------------- about.html ---------------------- */
+.about-table-header {
+    text-align: left;
+}
+/* ----------------- about.html ---------------------- */
+
+footer {
+    height: var(--footer-height);
+    /* height: 20%; */
+    border: green 3px solid;
+    /* right: 0; */
 }
 
 #top-footer {
     background-color: #6f2079;
     color: #fff;
+    height: 50%;
 }
 
 #bottom-footer {
     background-color:#3b3b3b;
-    color: rgb(87, 87, 245);
+    color: #5757f5;
+    height: 50%;
+    /* height: var(--bottom-footer-height); */
+}
+
+/* ----------------- psuedo---------------------- */
+
+.nav-elements-container a:hover {
+    background-color: #767676;
 }
