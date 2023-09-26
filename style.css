@@ -38,7 +38,7 @@ nav {
     background-color:#3b3b3b;
     height: var(--nav-height);
     position: sticky;
-    top: 0;
+    top: 30%;
     right: 0;
     background-color: #333; /* Set your desired background color */
     /* padding: 10px;  */
