@@ -168,8 +168,44 @@ main {
     font-size:20px;
 }
 
+/* ----------------- curriculum.html ---------------------- */
+    #slideshow-gallery-container  {  /* contains all elements */
+        height: 50%;
+        border: green 3px solid;
+    }
 
+    #left-btn, #right-btn, #slideshow-gallery { 
+        /* display: inline-block; */
+        float: left;
+    }
 
+    #slideshow-gallery { /* inner container with the images */
+        border: brown 1px solid;
+        width: 60%;
+        height: 100%;
+    }
+
+    #left-btn {
+        /* float: left; */
+        margin: 18% 0 0 19%;
+    }
+
+    #right-btn {
+        /* float: right; */
+        margin: 18% 0 0 0;
+    }
+
+    img {
+        /* display: none; */
+        
+        width: 60px;
+        height: 60px;
+    }
+
+    #marks {
+        column-count: 3;
+    }
+/* ----------------- curriculum.html ---------------------- */
 
 
 /* ----------------- bookings.html ---------------------- */
