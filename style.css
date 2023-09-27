@@ -4,8 +4,8 @@
     --nav-height: 6%; 
     --main-height: 76%;
     --footer-height: 10%;   
-    /* --top-footer-height: 10%;
-    --bottom-footer-height: 10%; */
+    --top-footer-height: 40%;
+    --bottom-footer-height: 60%;
   }
   
 
@@ -89,8 +89,8 @@ nav a * {
 }
 
 main {
-    /* flex: 1; /* flex-grow: 1 flex:shrink flex:basis; */
-    flex: auto;
+    flex: 1; /* flex-grow: 1 flex:shrink flex:basis; */
+    /* flex: uto; */
     /* display: flex; */
     padding: 2em 0 2em 0;
     /* height: var(--main-height); */
@@ -159,13 +159,15 @@ footer {
 #top-footer {
     background-color: #6f2079;
     color: #fff;
-    height: 50%;
+    height: var(--top-footer-height)
 }
 
 #bottom-footer {
     background-color:#3b3b3b;
     color: #5757f5;
+    /* height: auto; */
     /* height: var(--bottom-footer-height); */
+    height: 100%;
 }
 
 /* ----------------- psuedo---------------------- */
