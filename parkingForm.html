@@ -49,33 +49,52 @@
             </a>
         </div>
     </nav>
-    
+
     <main class="center">
-        <form action="#">
-            <label for="date">Meal date</label><br>
-            <input type="date" id="date" name="date" ><br><br>
-            <label for="balance_one">Meal Balance for Semester 1</label><br>
-            <input type="number" id="balance_one" name="balance_one" value="69.42" readonly><br><br>
-            <label for="balance_two">Meal Balance for Semester 2</label><br>
-            <input type="number" id="balance_two" name="balance_two" value="420.69" readonly>
-            <br><br>
-        </form>
+        <p>
+            The closing date to apply for a seat on the Depression Bench is 1 November 2027. If you have not applied for
+            a seat by this date then you will not be allocated a seat on a Depression Bench for 2028. It is up to you to
+            ensure that your payment arrangements are cleared by the CFO before 1 January 2028, so that if a seat
+            becomes available you can be allocated it.
+        </p>
+        <br>
+        <p>
+            Please note that booking an entire Depression Bench for yourself results in additional charges, so please
+            indicate your preference clearly in the form below.
+        </p>
+        <br>
+        <p>
+            To cancel your application for a Depression Bench, please contact the CEO directly.
+        </p>
         <br>
         <div class="bubble">
-            <p><strong>BREAKFAST:</strong> Lightly-expired ham Sandwhich</p>
-        </div><br>
-        <div class="bubble">
-            <p><strong>LUNCH:</strong> Medium-rare Chicken with Kale</p>
-        </div><br>
-        <div class="bubble">
-            <p><strong>DINNER:</strong> Unbooked</p>
-        </div><br>
-        <form>
-            <input type="submit" name="submit" value="Submit">
-        </form><br><br>
-        <p>For comments, questions, suggestions, please contact the CTO directly, and include your phone number.</p>
+            <form action="#">
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname" ><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname" ><br><br>
+                <p>Area on campus:</p>
+                <input type="radio" id="one" name="seat" value="One">
+                <label for="one">Journalism department</label><br>
+                <input type="radio" id="two" name="seat" value="Two">
+                <label for="two">Psychology department</label><br>
+                <input type="radio" id="three" name="seat" value="Three">
+                <label for="three">HKE department</label><br>
+                <input type="radio" id="bench" name="seat" value="All">
+                <label for="bench">Blue route</label><br>
+                <input type="radio" id="bench" name="seat" value="All">
+                <label for="bench">Eden Grove</label><br>
+                <input type="radio" id="bench" name="seat" value="All">
+                <label for="bench">Barrat</label><br><br>
+                <input type="submit" name="submit" value="Submit"> <input type="submit" name="submit" value="Cancel" style="margin-left: 15% ;">
+            </form>
+        </div> <br>
+        <p>
+            Please note that the above booking is only applicable for the FIRST SEMESTER of 2028. Bookings will need to be renewed for the second semester in May of 2028.
+        </p>
+        <br>
     </main>
-    
+
     <footer>
         <div id="top-footer">
             <p class="center">HAMRAT UNIVERSITY<br>Where Leaders Yearn</p> 
