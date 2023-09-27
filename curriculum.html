@@ -8,6 +8,8 @@
         <title>HamRat University - where leaders yearn</title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Condensed">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <script src="js/script.js" defer></script>
     </head>
     
     <body>
@@ -21,23 +23,28 @@
         <nav>
             <div class="nav-elements-container">
                 <a href="./index.html">
-                    <div class="nav-element">My Dashboard</div>
+                    <span class="material-icons">dashboard</span>
+                    <p class="nav-btn-text">My Dashboard</p>
                 </a>
-                &nbsp;
                 <a href="./about.html">
-                    <div class="nav-element">About Us</div>
+                    <span class="material-icons">psychology_alt</span>
+                    <p class="nav-btn-text">About Us</p>
                 </a>
-                &nbsp;
-                <a href="./curriculum.html">
-                    <div class="nav-element">Curriculum</div>
+                <a class="current-nav" href="./curriculum.html"> 
+                    <span class="material-icons">library_books</span>
+                    <p class="nav-btn-text">Curriculum</p>
                 </a>
-                &nbsp;
                 <a href="./bookings.html">
-                    <div class="nav-element">My Bookings</div>
+                    <span class="material-icons">list_alt</span>
+                    <p class="nav-btn-text">My Bookings</p>
                 </a>
-                &nbsp;
-                <a href="./utilities.html">
-                    <div class="nav-element">My Utilities</div>
+                <a onclick="myFunction()" class="dropdown dropbtn" >
+                    <span class="material-icons">tune</span>My Utilities
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#contact">Contact</a>
+                    </div>
                 </a>
             </div>
         </nav>
