@@ -171,13 +171,6 @@ main {
     font-size:20px;
     padding:5px;
     height: 33.33%;
-    animation-name: dashboard;
-    animation-duration: 4s;
-}
-
-@keyframes dashboard {
-    0%   {left: 0px; top: 0px;}
-    100%  {left: 100px; top: 0px;}
 }
 
 
@@ -189,6 +182,10 @@ main {
     font-size:20px;
     /* padding:5px; */
 }
+
+
+
+
 
 /* ----------------- bookings.html ---------------------- */
 #bookings-list {
@@ -202,6 +199,30 @@ main {
 /* ----------------- about.html ---------------------- */
 .about-table-header {
     text-align: left;
+}
+
+#big-rat {
+    position: absolute;
+    animation-name: rat;
+    /* animation-iteration-count: infinite; */
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+@keyframes rat {
+    0% {
+        left: 0;
+        bottom: 15%;
+      }
+      50% {
+        left: 80%;
+        bottom: 15%;
+      }
+      100% {
+        left: 0;    
+        bottom: 15%;
+      }
 }
 /* ----------------- about.html ---------------------- */
 
