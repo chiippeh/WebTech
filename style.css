@@ -22,22 +22,28 @@ html, body {
 }
 
 header {
-    background-color: #6f2079;
+    /* background-color: #6f2079; */
     /* width: 100%; */
     font-family: "Roboto Condensed", Helvetica, sans-serif;
     color:#fff;
     /* height: var(--header-height); */
     height: 50px;
     /* border: green 3px solid; */
+    position: fixed; /* Make it stick/fixed */
+    top: -50px; /* Hide the navbar 50 px outside of the top view */
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
 }
 
 #header-container {
-    text-align: right;
+    background-color: #6f2079;
+    text-align: center;
     height: 100%;
-    width: 60vw;
+    width: 20vw;
     margin: auto;
     /* border: blue 3px dotted; */
     padding: 1.5vh 0 0 0;
+    margin: 0 0 0 80vw;
+    border-radius: 0 0 0 20px;
 }
 
 nav {
@@ -83,6 +89,42 @@ nav a * {
     /* border: white 2px solid; */
     border-radius: 4px 4px 0 0;
 }
+
+.dropbtn {
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    float: right;
+    position: relative;
+    display: inline-block;
+
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #3b3b3b;
+    width: 12.3%;
+    overflow: auto;
+    right: 17.5%;
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown a:hover {background-color: #ddd;}
+
+  .show {display: block;}
 
 .sidebar {
     border: yellow 2px solid;
@@ -179,6 +221,9 @@ footer {
 /* ----------------- psuedo---------------------- */
 
 @media only screen and (max-width: 1010px) {
+    header {
+        display: none;
+    }
     nav {
         left:0;
         width: 15%;

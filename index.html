@@ -10,10 +10,11 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Condensed">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
-    <header>
+    <header id="header">
         
         <h3 id="header-container">
             Logged into LOSS as YoMamma
@@ -37,9 +38,13 @@
                 <span class="material-icons">list_alt</span>
                 <p class="nav-btn-text">My Bookings</p>
             </a>
-            <a href="./utilities.html">
-                <span class="material-icons">tune</span>
-                <p class="nav-btn-text">My Utilities</p>
+            <a onclick="myFunction()" class="dropdown dropbtn" >
+                <span class="material-icons">tune</span>My Utilities
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
             </a>
         </div>
     </nav>
@@ -62,7 +67,6 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
-            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
@@ -84,7 +88,8 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p> -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
         </div>
     </main>
     
