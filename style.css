@@ -4,8 +4,8 @@
     --nav-height: 6%; 
     --main-height: 76%;
     --footer-height: 10%;   
-    --top-footer-height: 40%;
-    --bottom-footer-height: 60%;
+    --top-footer-height: 50%;
+    --bottom-footer-height: 50%;
   }
   
 
@@ -209,7 +209,7 @@ footer {
     color: #5757f5;
     /* height: auto; */
     /* height: var(--bottom-footer-height); */
-    height: 100%;
+    height: var(--bottom-footer-height);
 }
 
 /* ----------------- psuedo---------------------- */
@@ -259,6 +259,9 @@ footer {
         width: auto;
         text-align: right;
     }
+    #bottom-footer{
+        height: 100%;
+    }
   }
 
 @media only screen and (max-width: 547px) {
@@ -271,6 +274,7 @@ footer {
         display: none;
     }
 
+    
     body{
         margin-left:10%;
     }
