@@ -1,4 +1,7 @@
 
+/* Created in collaboration with
+Mila-jo Davies (g21d6937), Wynne Edwards (g21e2079), Manusizwe Jourdan (g21j5408) */
+
 :root {
     --header-height: 6%;
     --nav-height: 6%; 
@@ -159,6 +162,7 @@ main {
     /* padding: 10px; */
 }
 
+
 .dashboard {
     border: 2px solid #000;
     border-radius: 10px;
@@ -167,7 +171,15 @@ main {
     font-size:20px;
     padding:5px;
     height: 33.33%;
+    animation-name: dashboard;
+    animation-duration: 4s;
 }
+
+@keyframes dashboard {
+    0%   {left: 0px; top: 0px;}
+    100%  {left: 100px; top: 0px;}
+}
+
 
 .bubble {
     border: 2px solid #000;
