@@ -126,7 +126,7 @@ main {
     padding: 2em 0 2em 0;
 }
 
-#main-container { /* Container for the main content */
+.main-container { /* Container for the main content */
     margin: auto;
     width: 60%;
 }
@@ -245,6 +245,47 @@ main {
       }
 }
 /* ----------------- about.html ---------------------- */
+
+/* ----------------- home.html ---------------------- */
+
+#home-container {
+    background-color: rgb(213, 213, 213);
+    border-radius: 50px;
+    height: 80%;
+    padding: 5%;
+}
+
+#welcome {
+    background-color: rgb(176, 109, 179);
+    border-radius: 50px;
+    height: 20%;
+    text-align: center;
+    font-size: xx-large;
+}
+
+#circle{
+    position:absolute;
+    transform:translate(-50%,-50%);
+    height:35px;
+    width:35px;
+    border-radius:50%;
+    border:2px solid black;
+  }
+
+*  {
+    overflow:hidden;
+}
+/* 
+#loginSignup {
+    
+} */
+
+#login, #signup {
+    margin: 0 0 0 40%;
+    width: 25%;
+}
+
+/* ----------------- home.html ---------------------- */
 
 footer { /* Footer is the bottom bar with the contact details */
     height: 100px;
