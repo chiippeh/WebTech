@@ -223,10 +223,8 @@ main {
     text-align: left;
 }
 
-#easter-egg {
+#egg {
     display: none;
-    font-size: x-large;
-    color: #6f2079;
 }
 
 #big-rat {
