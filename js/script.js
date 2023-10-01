@@ -28,3 +28,19 @@ if (!event.target.matches('.dropbtn')) {
     }
 }
 }
+
+
+const clickRatL = document.getElementById('big-rat');
+const clickRatR = document.getElementById('new-rat');
+
+//changes the webpage when the left rat is clicked
+clickRatL.addEventListener('click', () => {
+    document.body.style.backgroundColor = 'black';
+    document.getElementById('easter-egg').style.display = 'block';
+});
+
+//changes the webpage when the right rat is clicked
+clickRatR.addEventListener('click', () => {
+  document.body.style.backgroundColor = 'white';
+  document.getElementById('easter-egg').style.display = 'none';
+});
