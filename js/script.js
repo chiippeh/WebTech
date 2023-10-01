@@ -6,8 +6,6 @@ const cookiesEnabled = navigator.cookieEnabled;
 
 // const footer = document.querySelector('footer');
 const bottomFooter = document.getElementById('bottom-footer');
-const dashboard = document.querySelectorAll('.dashboard');
-const container = document.getElementById('egg');
 
 // I couldn't implement the Slide Down a Bar on Scroll without using javascript :(
 
