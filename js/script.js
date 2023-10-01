@@ -7,6 +7,7 @@ const cookiesEnabled = navigator.cookieEnabled;
 // const footer = document.querySelector('footer');
 const bottomFooter = document.getElementById('bottom-footer');
 const dashboard = document.querySelectorAll('.dashboard');
+const container = document.getElementById('egg');
 
 // I couldn't implement the Slide Down a Bar on Scroll without using javascript :(
 
@@ -62,23 +63,29 @@ bottomFooter.appendChild(browserInfo);
 
 
 
-
-
-
-
-
-
 const clickRatL = document.getElementById('big-rat');
 const clickRatR = document.getElementById('new-rat');
+const easterEgg = document.createElement('p');
+// Set attributes or properties for the new element
+easterEgg.textContent = 'WELCOME TO THE RAT CULT ;)';
+easterEgg.style.color = '#6f2079';
+easterEgg.style.fontSize = 'x-large';
+easterEgg.style.fontWeight = 'bold';
+
+// Get a reference to the container where you want to insert the new element
+
+// Append the new element to the container
+container.appendChild(easterEgg);
 
 //changes the webpage when the left rat is clicked
 clickRatL.addEventListener('click', () => {
-    document.body.style.backgroundColor = 'black';
-    document.getElementById('easter-egg').style.display = 'block';
+
+  document.body.style.backgroundColor = 'black';
+  document.getElementById('egg').style.display = 'block';
 });
 
 //changes the webpage when the right rat is clicked
 clickRatR.addEventListener('click', () => {
   document.body.style.backgroundColor = 'white';
-  document.getElementById('easter-egg').style.display = 'none';
+  document.getElementById('egg').style.display = 'none';
 });
