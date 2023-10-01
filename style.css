@@ -300,7 +300,8 @@ footer { /* Footer is the bottom bar with the contact details */
 #bottom-footer { /* Bottom footer is the bottom half of the footer */
     background-color:#3b3b3b;
     color: #5757f5;
-    height: var(--bottom-footer-height);
+    /* height: var(--bottom-footer-height); */
+    height: 100%;
 }
 
 /* ----------------- psuedo---------------------- */
