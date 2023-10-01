@@ -1,0 +1,70 @@
+<!--Created in collaboration with:-->
+<!--Mila-jo Davies (g21d6937), Wynne Edwards (g21e2079), Manusizwe Jourdan (g21j5408)-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HamRat University - where leaders yearn</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Condensed">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- <script src="js/script.js" defer></script> -->
+    <script src="js/fees.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <div class="main-container">
+            <div id="top-main-container">
+                <div id="timer"></div>
+                <div id="amount-owed">Amount owed = R35,000</div>
+            </div>
+            <br><br>
+            <h1>Tuition Fee Payment</h1>
+            <form action="" method="post">
+                <label for="full-name">Full Name:</label><br>
+                <input type="text" id="full-name" name="full-name" required><br><br>
+
+                <label for="student-id">Student ID:</label><br>
+                <input type="text" id="student-id" name="student-id" required><br><br>
+
+                <label for="amount">Amount to Pay:</label><br>
+                <input type="number" id="amount" name="amount" min="0" required><br><br>
+
+                <label for="credit-card">Credit Card Number:</label><br>
+                <input type="text" id="credit-card" name="credit-card" pattern="[0-9]{16}" required><br><br>
+
+                <label for="expiration-date">Expiration Date:</label><br>
+                <input type="text" id="expiration-date" name="expiration-date" placeholder="MM/YY" pattern="(0[1-9]|1[0-2])\/\d{2}" required><br><br>
+
+                <label for="cvv">CVV:</label><br>
+                <input type="text" id="cvv" name="cvv" pattern="[0-9]{3}" required><br><br>
+
+                <input type="submit" value="Pay Now">
+            </form>
+        </div>
+    </main>
+    
+    <footer>
+        <div id="top-footer">
+            <p class="center">HAMRAT UNIVERSITY<br>Where Leaders Yearn</p> 
+            
+        </div>
+        <div id="bottom-footer">
+            <p class="center">&copy 2023 - loss Inc. <br>
+                <a href="mailto:g21j5408@campus.ru.ac.za?cc=g21d6937@campus.ru.ac.za&bcc=g21e2079@campus.ru.ac.za&subject=Feedback for LOSS&body=Add what you want we dont care really">
+                g21j5408@campus.ru.ac.za
+            </a>,
+            <a href="mailto:g21j5408@campus.ru.ac.za?cc=g21d6937@campus.ru.ac.za&bcc=g21e2079@campus.ru.ac.za&subject=Feedback for LOSS&body=Add what you want we dont care really">
+                g21d6937@campus.ru.ac.za
+            </a>,
+            <a href="mailto:g21j5408@campus.ru.ac.za?cc=g21d6937@campus.ru.ac.za&bcc=g21e2079@campus.ru.ac.za&subject=Feedback for LOSS&body=Add what you want we dont care really">
+                g21e2079@campus.ru.ac.za
+            </a></p>
+        </div>
+    </footer>
+</body>
+
+</html>

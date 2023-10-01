@@ -331,6 +331,27 @@ main {
 
 /* ----------------- home.html ---------------------- */
 
+
+/* ----------------- fees.html ---------------------- */
+#timer, #amount-owed {
+    display: inline-block;
+    width: 45%;
+    font-weight: bold;
+    font-size: calc(25px + 0.3vw);
+    color: red;
+}
+
+#timer {
+    text-align: left;
+}
+
+#amount-owed {
+    text-align: right;
+}
+
+
+/* ----------------- fees.html ---------------------- */
+
 footer { /* Footer is the bottom bar with the contact details */
     height: 100px;
     font-size: calc(15px + 0.2vw);
