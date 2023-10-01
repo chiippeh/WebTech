@@ -6,6 +6,7 @@ const cookiesEnabled = navigator.cookieEnabled;
 
 // const footer = document.querySelector('footer');
 const bottomFooter = document.getElementById('bottom-footer');
+const dashboard = document.querySelectorAll('.dashboard');
 
 // I couldn't implement the Slide Down a Bar on Scroll without using javascript :(
 
@@ -35,8 +36,17 @@ if (!event.target.matches('.dropbtn')) {
         openDropdown.classList.remove('show');
     }
     }
+  }
 }
-}
+
+dashboard.forEach(element => {
+  element.addEventListener('click', function() {
+    // Code to run when a .dashboard element is clicked
+    console.log('Dashboard element clicked');
+    navigator.vibrate(5000);
+    // Add your specific code here
+  });
+});
 
 // Add brower language indicator to footer
 let browserInfo = document.createElement("div");// create div
