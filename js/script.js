@@ -1,10 +1,12 @@
+const lanugage = navigator.language;
+
 // I couldn't implement the Slide Down a Bar on Scroll without using javascript :(
 
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("header").style.top = "4%";
+    document.getElementById("header").style.top = "4.5vh";
   } else {
     document.getElementById("header").style.top = "-50px";
   }
@@ -28,3 +30,4 @@ if (!event.target.matches('.dropbtn')) {
     }
 }
 }
+

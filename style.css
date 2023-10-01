@@ -9,7 +9,8 @@ Mila-jo Davies (g21d6937), Wynne Edwards (g21e2079), Manusizwe Jourdan (g21j5408
     --footer-height: 10%;   
     --top-footer-height: 50%;
     --bottom-footer-height: 50%;
-  }
+
+}
   
 
 * { /* Reset CSS, allows the whole page to be centered top left with no margins */
@@ -23,6 +24,7 @@ html, body { /* Set the height of the body to 100% (We used display flex here an
     display: flex;
     flex-direction: column;
     height: 100vh;
+    font-size: calc(5px + 0.9vw);
 }
 
 header { /* Header is the top bar with the logo and the login button */
@@ -165,7 +167,7 @@ main {
     border-radius: 10px;
     box-shadow: 4px 4px 5px #323232;
     background:  #F2E6FF;
-    font-size:20px;
+    font-size: calc(15px + 0.3vw);
 }
 
 /* ----------------- curriculum.html ---------------------- */
@@ -272,9 +274,6 @@ main {
     border:2px solid black;
   }
 
-*  {
-    overflow:hidden;
-}
 /* 
 #loginSignup {
     
@@ -289,6 +288,7 @@ main {
 
 footer { /* Footer is the bottom bar with the contact details */
     height: 100px;
+    font-size: calc(15px + 0.2vw);
 }
 
 #top-footer { /* Top footer is the top half of the footer */
@@ -339,7 +339,7 @@ footer { /* Footer is the bottom bar with the contact details */
     body{
         margin-left:15%; /* Set the margin of the body */
     }
-    #main-container{
+    .main-container{
         width: 90%;
     }
     #header-container{ /* Container for the header(text container) */
@@ -348,6 +348,10 @@ footer { /* Footer is the bottom bar with the contact details */
     }
     #bottom-footer{
         height: 100%; /* Set the height of the bottom footer */
+    }
+
+    .center {
+        width: 80%;
     }
   }
 
