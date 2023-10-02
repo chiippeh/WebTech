@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Condensed">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <script src="js/script.js" defer></script>
+        <script src="js/curriculum.js" defer></script>
     </head>
     
     <body>
@@ -52,13 +53,13 @@
             <p>Get your degree <a href="https://www.youtube.com/watch?v=zuegQmMdy8M">here</a></p>
             <br>
             <div id="slideshow-gallery-container">
-                <div id="left-btn"><</div>
-                <div id="slideshow-gallery">
+                <button onclick="plusSlides(-1)" id="left-btn"><</button>
+                <div id="slideshow-gallery" >
                     <img src="images/grad.jpg" alt="">
                     <img src="images/graduation.webp" alt="">
                     <img src="images/graduate.jpg" alt="">
                 </div>
-                <div id="right-btn">></div>
+                <button onclick="plusSlides(1)" id="right-btn">></button>
             </div>
             <br>
             <h3>Ode to Curriculum</h3>
