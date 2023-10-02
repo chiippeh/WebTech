@@ -1,6 +1,7 @@
 const troll = document.getElementById('lol');
 const lastLaugh = document.createElement('div');
 const lineBreak = document.createElement('br');
+const dbl = lineBreak.cloneNode(true);
 
 lastLaugh.textContent = 'YOUR APPLICATION HAS BEEN DELETED SUCCESSFULLY';
 lastLaugh.style.color = 'green';
@@ -9,6 +10,7 @@ lastLaugh.style.fontSize = 'xx-large';
 
 
 document.getElementById('last-laugh').appendChild(lineBreak);
+document.getElementById('last-laugh').appendChild(dbl);
 document.getElementById('last-laugh').appendChild(lastLaugh);
 
 troll.addEventListener('click', () => {

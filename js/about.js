@@ -15,7 +15,6 @@ container.appendChild(easterEgg);
 
 //changes the webpage when the left rat is clicked
 clickRatL.addEventListener('click', () => {
-
   document.body.style.backgroundColor = 'black';
   document.getElementById('egg').style.display = 'block';
 });
