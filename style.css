@@ -172,8 +172,8 @@ main {
 
 /* ----------------- curriculum.html ---------------------- */
     #slideshow-gallery-container  {  /* contains all elements */
-        border: green 3px solid;
-        height: 15%;
+        height: 30%;
+       
 
     }
 
@@ -183,11 +183,14 @@ main {
     }
 
     #slideshow-gallery { /* inner container with the images */
-        border: brown 1px solid;
+        border: black 3px solid;
+        padding: 1em;
+        border-radius: 15px;
         position: relative;
         width: 60%; 
         margin: 0 auto;
         height: 100%;
+        background-color: #323232;
 
     }
 
@@ -204,14 +207,14 @@ main {
 
     #left-btn {
         /* float: left; */
-        margin: 18% 0 0 19%;
+        margin: 5% 0 0 19%;
         padding: 1%;
         border-radius: 50px;
     }
 
     #right-btn {
         /* float: right; */
-        margin: 18% 0 0 0;
+        margin: 5% 0 0 0;
         padding: 1%;
         border-radius: 50px;
     }
@@ -223,9 +226,9 @@ main {
         height: 80%;
     }
 
-    #marks {
+    /* #marks {
         column-count: 3;
-    }
+    } */
 /* ----------------- curriculum.html ---------------------- */
 
 
