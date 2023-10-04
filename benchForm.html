@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Condensed">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="js/script.js" defer></script>
+    <script src="js/benchForm.js" defer></script>
 </head>
 
 <body>
@@ -66,14 +67,18 @@
             To cancel your application for a Depression Bench, please contact the CEO directly.
         </p>
         <br>
+        <div id="errorMessages" ></div>
         <div class="bubble">
-            <form action="#">
+            <form name="bench" action="#" onsubmit="return validateBench()">
                 <label for="fname">First name:</label><br>
-                <input type="text" id="fname" name="fname" required><br>
+                <input type="text" id="fname" name="fname"><br>
+
                 <label for="lname">Last name:</label><br>
-                <input type="text" id="lname" name="lname" required><br>
+                <input type="text" id="lname" name="lname" ><br>
+
                 <label for="snum">Student number:</label><br>
-                <input type="text" id="snum" name="snum" required><br><br>
+                <input type="text" id="snum" name="snum" ><br><br>
+
                 <p>Number of seats:</p>
                 <input type="radio" id="one" name="seat" value="One">
                 <label for="one">One (R500.00)</label><br>
@@ -86,6 +91,7 @@
                 <input type="submit" name="submit" value="Submit"> <input type="submit" name="submit" value="Cancel" style="margin-left: 15% ;">
             </form>
         </div> <br>
+
         <p>
             Please note that the above booking is only applicable for the FIRST SEMESTER of 2028. Bookings will need to be renewed for the second semester in May of 2028.
         </p>

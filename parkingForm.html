@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Condensed">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="js/script.js" defer></script>
+    <script src="js/parkingForm.js" defer></script>
 </head>
 
 <body>
@@ -65,14 +66,18 @@
             To cancel your application for a parking spot, please contact the CEO directly.
         </p>
         <br>
+        <div id="errorMessages" ></div>
         <div class="bubble">
-            <form action="#">
+            <form action="#" onsubmit="return validateParking()">
                 <label for="fname">First name:</label><br>
-                <input type="text" id="fname" name="fname" required><br>
+                <input type="text" id="fname" name="fname"><br>
+
                 <label for="lname">Last name:</label><br>
-                <input type="text" id="lname" name="lname" required><br>
+                <input type="text" id="lname" name="lname"><br>
+
                 <label for="snum">Student number:</label><br>
-                <input type="text" id="snum" name="snum" required><br><br>
+                <input type="text" id="snum" name="snum"><br><br>
+
                 <p>Area on campus:</p>
                 <input type="radio" id="one" name="seat" value="One">
                 <label for="one">Journalism department</label><br>

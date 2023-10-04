@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Condensed">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="js/script.js" defer></script>
+    <script src="js/mealForm.js" defer></script>
 </head>
 
 <body>
@@ -50,11 +51,16 @@
     </nav>
     
     <main class="center">
-        <form action="#">
+        <div id="errorMessages" ></div>
+        <form name="meals" action="#" onsubmit="return validateMeals()">
             <label for="date">Meal date</label><br>
-            <input type="date" id="date" name="date" required><br><br>
+            <input type="date" id="date" name="date" ><br><br>
+
+            <input type="submit" name="submit" value="Submit"><br><br>
+
             <label for="balance_one">Meal Balance for Semester 1</label><br>
             <input type="number" id="balance_one" name="balance_one" value="69.42" readonly><br><br>
+            
             <label for="balance_two">Meal Balance for Semester 2</label><br>
             <input type="number" id="balance_two" name="balance_two" value="420.69" readonly>
             <br><br>
@@ -69,9 +75,6 @@
         <div class="bubble">
             <p><strong>DINNER:</strong> Unbooked</p>
         </div><br>
-        <form>
-            <input type="submit" name="submit" value="Submit">
-        </form><br><br>
         <p>For comments, questions, suggestions, please contact the CTO directly, and include your phone number.</p>
     </main>
     

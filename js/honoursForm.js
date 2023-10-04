@@ -17,3 +17,5 @@ troll.addEventListener('click', () => {
     document.getElementById('last-laugh').style.display = 'block';
     document.getElementById('hon-form').remove();
 })
+
+
