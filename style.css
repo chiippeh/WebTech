@@ -1,25 +1,29 @@
-
 /* Created in collaboration with
 Mila-jo Davies (g21d6937), Wynne Edwards (g21e2079), Manusizwe Jourdan (g21j5408) */
 
-:root { /* CSS variables for multi use */
+/*The global information such as heights as well as reseting the margins to remove whitespace on sides and html body general sizing*/
+:root {
+    /* CSS variables for multi use */
     --header-height: 6%;
-    --nav-height: 6%; 
+    --nav-height: 6%;
     --main-height: 76%;
-    --footer-height: 10%;   
+    --footer-height: 10%;
     --top-footer-height: 50%;
     --bottom-footer-height: 50%;
 
 }
   
 
-* { /* Reset CSS, allows the whole page to be centered top left with no margins */
+* {
+    /* Reset CSS, allows the whole page to be centered top left with no margins */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body { /* Set the height of the body to 100% (We used display flex here and only here because it is required for this feature
+html,
+body {
+    /* Set the height of the body to 100% (We used display flex here and only here because it is required for this feature
     There isnt another way of accomplishing what we wanted. The body to dynamically fit the whole page but also expand with more content*/
     display: flex;
     flex-direction: column;
@@ -27,45 +31,73 @@ html, body { /* Set the height of the body to 100% (We used display flex here an
     font-size: calc(5px + 0.9vw);
 }
 
-header { /* Header is the top bar with the logo and the login button */
-    font-family: "Roboto Condensed", Helvetica, sans-serif;
-    color:#fff; 
-    height: 50px;
-    position: fixed; /* Make it stick/fixed */
-    top: -50px; /* Hide the navbar 50 px outside of the top view */
-    transition: top 0.3s; /* Transition effect when sliding down (and up) */
+.center {
+    margin: auto;
+    width: 50%;
+
 }
 
-#header-container { /* Container for the header(text container) */
+.bubble ol {
+    position: relative;
+    left: 3%;
+}
+
+main {
+    flex: 1;
+    padding: 2em 0 2em 0;
+}
+
+#main-container {
+    margin: auto;
+    width: 60%;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*Our navigation Bars
+    -Our nav is a collection of elements that sit at the top of the page, the code here is everything relating to the styling of our nav bars
+    with the exception of our psuedo code (media queries) which can be found at the bottom of hte page*/
+header {
+    /* Header is the top bar with the logo and the login button */
+    font-family: "Roboto Condensed", Helvetica, sans-serif;
+    color: #fff;
+    height: 50px;
+    position: fixed;
+    top: -50px;
+    transition: top 0.3s;
+}
+
+#header-container {
     background-color: #6f2079;
-    text-align: center; /* Center the text */
+    text-align: center;
     height: 100%;
-    width: 20vw; /* Set the width of the sidebar */
-    margin: auto; /* Center the sidebar */
-    padding: 1.5vh 0 0 0; 
+    width: 20vw;
+    margin: auto;
+    padding: 1.5vh 0 0 0;
     margin: 0 0 0 80vw;
     border-radius: 0 0 0 20px;
 }
 
-nav { /* Nav is the side bar with the nav elements */
-    background-color:#3b3b3b;
+nav {
+    background-color: #3b3b3b;
     height: 50px;
-    position: sticky; /* Make it stick/fixed */
-    top: 0; /* Stick the navbar to the top */
-    background-color: #333; 
-    z-index: 1000; /* Make sure it does not overlap */
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    z-index: 1000;
     color: #ffff;
 }
 
-.nav-elements-container { /* Container for the nav elements */
+.nav-elements-container {
     margin: auto;
     width: 65vw;
-    height: 100%; 
+    height: 100%;
 }
 
-nav a { /* Nav elements */
-    display: inline-block; /* Make sure the nav elements are on the same line */
-    text-decoration: none; /* Remove underline */
+nav a {
+    display: inline-block;
+    text-decoration: none;
     height: 100%;
     width: 19%;
     text-align: center;
@@ -73,96 +105,90 @@ nav a { /* Nav elements */
     color: #ffff;
 }
 
-nav a * { /* All Nav child elements */
-    display: inline-block; /* Make sure the nav elements are on the same line */
+nav a * {
+    display: inline-block;
 }
 
 
-.current-nav { /* Current nav element, ie page we are on */
+.current-nav {
     background-color: #767676;
     outline: solid 2px white;
-    outline-offset: -2px; /* Make sure the outline is inside the element */
+    outline-offset: -2px;
     border-radius: 4px 4px 0 0;
 }
 
-.dropbtn { /* Dropdown button */
+.dropbtn {
     color: white;
     padding: 16px;
     font-size: 16px;
-    border: none; /* Remove border */
-    cursor: pointer; /* Cursor on hover */
-  }
-  
-  .dropdown { /* Dropdown container */
-    float: right; /* Float the dropdown to the right */
-    position: relative;
-    display: inline-block; /* Make sure the dropdown is on the same line */
+    border: none;
+    cursor: pointer;
+}
 
-  }
-  
-  .dropdown-content { /* Dropdown content */
-    display: none; /* Hide the dropdown content by default*/
-    position: absolute; /* Position the dropdown to be absolutecontent */
-    background-color: #3b3b3b;
-    width: 12.3%;
-    overflow: auto; /* Enable scroll if needed */
+.dropdown {
+    float: right;
+    position: relative;
+    display: inline-block;
+
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
     right: 17.5%;
-    z-index: 1; /* Make sure the dropdown is on top of other elements */
-  }
-  
-  .dropdown-content a { /* Dropdown links */
+    z-index: 1;
+}
+
+.dropdown-content a {
     color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     width: 100%;
     text-align: left;
-  }
-  
-  .dropdown a:hover {background-color: #ddd;} /* Add a grey background color to dropdown links on hover */
-
-  .show {display: block;} /* Show the dropdown menu on hover */
-
-main { 
-    flex: 1; /* flex-grow: 1 flex:shrink flex:basis; */
-    padding: 2em 0 2em 0;
 }
 
-.main-container { /* Container for the main content */
-    margin: auto;
-    width: 60%;
+.dropdown a:hover {
+    background-color: #ddd;
 }
 
-/* Generic center align element  */
-.center { 
-    margin: auto;
-    width: 50%;
-    /* height: 100%; */
-}
-.bubble ol{ /* Bubble list moved slightly right for positioning */
-    position: relative;
-    left:3%;
-}
 
-.dashboard { /* Dashboard elements */
+.show {
+    display: block;
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*Our main content
+    -Our main content is the content that sits in the middle of the page, the code here is everything relating to the styling of our main content
+    with the exception of our psuedo code (media queries) which can be found at the bottom of the page
+    -This is more general code seeing it applies to all our pages not just our index.html */
+.dashboard {
     border: 2px solid #000;
     border-radius: 10px;
     box-shadow: 4px 4px 5px #323232;
     background: #ffffcc;
-    font-size:20px;
-    padding:5px;
+    font-size: 20px;
+    padding: 5px;
     height: 33.33%;
-    animation-name: dashboard; /* Animation name being set*/
-    animation-duration: 4s; /* Animation duration being set */
+    animation-name: dashboard;
+    animation-duration: 4s;
 }
 
-@keyframes dashboard { /* Animation keyframes */
-    0%   {left: 0px; top: 0px;} /* Start position */
-    100%  {left: 100px; top: 0px;} /* End position */
+@keyframes dashboard {
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+
+    100% {
+        left: 100px;
+        top: 0px;
+    }
 }
 
 
-.bubble { /* Bubble elements (bubble is a generic bubble we use multiple pages*/
+.bubble {
     border: 2px solid #000;
     border-radius: 10px;
     box-shadow: 4px 4px 5px #323232;
@@ -177,10 +203,12 @@ main {
 
     }
 
-    #left-btn, #right-btn, #slideshow-gallery { 
-        /* display: inline-block; */
-        float: left;
-    }
+#left-btn,
+#right-btn,
+#slideshow-gallery {
+
+    float: left;
+}
 
     #slideshow-gallery { /* inner container with the images */
         border: brown 1px solid;
@@ -203,41 +231,40 @@ main {
 
 
     #left-btn {
-        /* float: left; */
+        
         margin: 18% 0 0 19%;
         padding: 1%;
         border-radius: 50px;
     }
 
     #right-btn {
-        /* float: right; */
+        
         margin: 18% 0 0 0;
         padding: 1%;
         border-radius: 50px;
     }
 
     img {
-        /* display: none; */
+        
         
         width: 80%;
         height: 80%;
     }
 
-    #marks {
-        column-count: 3;
-    }
-/* ----------------- curriculum.html ---------------------- */
-
-
-/* ----------------- bookings.html ---------------------- */
-#bookings-list { 
-    list-style-type: none; 
-    font-size:20px;
+#marks {
+    column-count: 3;
 }
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------*/
+
 /* ----------------- bookings.html ---------------------- */
+#bookings-list {
+    list-style-type: none;
+    font-size: 20px;
+}
 
-
-/* ----------------- about.html ---------------------- */
+/* ----------------- about.html ---------------------- 
+    Our code specific to the about.html page*/
 .about-table-header {
     text-align: left;
 }
@@ -300,17 +327,20 @@ main {
     0% {
         left: 0;
         bottom: 15%;
-      }
-      50% {
+    }
+
+    50% {
         left: 80%;
         bottom: 15%;
-      }
-      100% {
-        left: 0;    
+    }
+
+    100% {
+        left: 0;
         bottom: 15%;
-      }
+    }
 } */
-/* ----------------- about.html ---------------------- */
+
+/*Our footer for all our pages, its general and not specific to a page*/
 
 /* ----------------- home.html ---------------------- */
 
@@ -338,10 +368,7 @@ main {
     border:2px solid black;
   }
 
-/* 
-#loginSignup {
-    
-} */
+
 
 #login, #signup {
     margin: 0 0 0 40%;
@@ -369,71 +396,73 @@ main {
 }
 
 
-/* ----------------- fees.html ---------------------- */
 
-footer { /* Footer is the bottom bar with the contact details */
+
+footer {
     height: 100px;
     font-size: calc(15px + 0.2vw);
 }
 
-#top-footer { /* Top footer is the top half of the footer */
+#top-footer {
     background-color: #6f2079;
     color: #fff;
     height: var(--top-footer-height)
 }
 
-#bottom-footer { /* Bottom footer is the bottom half of the footer */
-    background-color:#3b3b3b;
+#bottom-footer {
+    background-color: #3b3b3b;
     color: #5757f5;
-    /* height: var(--bottom-footer-height); */
+    
     height: 100%;
 }
-
+/*---------------------------------------------------------------------------------------------------------------------------------------------*/
 /* ----------------- psuedo---------------------- */
 
-.nav-elements-container a:hover { /* Nav elements hover */
+.nav-elements-container a:hover {
     background-color: #767676;
 }
 
-/* ----------------- psuedo---------------------- */
 
-@media only screen and (max-width: 1010px) { /* Media query for smaller screens */
+@media only screen and (max-width: 1010px) {
     header {
-        display: none; /* Hide the header */
-    }
-    nav { 
-        left:0; /* Set the nav to the left */
-        width: 15%; /* Set the width of the nav */
-        height: 100%; /* Set the height of the nav */
-        position: fixed; /* Make it stick/fixed */
+        display: none;
     }
 
-    .nav-elements-container{
+    nav {
+        left: 0;
+        width: 15%;
+        height: 100%;
+        position: fixed;
+    }
+
+    .nav-elements-container {
         width: 100%;
     }
-    
+
     nav a {
-        display: block; /* Make sure the nav elements are on the same line */
+        display: block;
         height: 10%;
         width: 100%;
     }
 
     .current-nav {
-        border-radius: 0; /* Remove the border radius */
+        border-radius: 0;
     }
 
-    body{
-        margin-left:15%; /* Set the margin of the body */
+    body {
+        margin-left: 15%;
     }
     .main-container{
         width: 90%;
     }
-    #header-container{ /* Container for the header(text container) */
-        width: auto; /* Set the width of the sidebar */
-        text-align: right; /* Right the text */
+
+    #header-container {
+        width: auto;
+        text-align: right;
     }
-    #bottom-footer{
-        height: 100%; /* Set the height of the bottom footer */
+
+    #bottom-footer {
+        height: 100%;
     }
 
     .center {
@@ -441,21 +470,21 @@ footer { /* Footer is the bottom bar with the contact details */
     }
   }
 
-@media only screen and (max-width: 547px) { /* Media query for even smaller screens (mobile view) */
+@media only screen and (max-width: 547px) {
 
     nav {
-        width:10%; /* Set the width of the nav */
+        width: 10%;
     }
 
     .nav-btn-text {
-        display: none; /* Hide the text */
+        display: none;
     }
 
-    
-    body{
-        margin-left:10%; /* Set the margin of the body */
+
+    body {
+        margin-left: 10%;
     }
 
 }
 
-  
+/*---------------------------------------------------------------------------------------------------------------------------------------------*/
