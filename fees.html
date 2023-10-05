@@ -50,7 +50,7 @@
             </a>
         </div>
     </nav>
-    <main>
+    <main class="center">
         <div class="main-container">
             <div id="top-main-container">
                 <div id="timer"></div>
@@ -58,24 +58,25 @@
             </div>
             <br><br>
             <h1>Tuition Fee Payment</h1>
-            <form action="" method="post">
+            <div id="errorMessages" ></div>
+            <form action="" method="post" onsubmit="return validateFees()">
                 <label for="full-name">Full Name:</label><br>
-                <input type="text" id="full-name" name="full-name" required><br><br>
+                <input type="text" id="full-name" name="full-name"><br><br>
 
                 <label for="student-id">Student ID:</label><br>
-                <input type="text" id="student-id" name="student-id" required><br><br>
+                <input type="text" id="student-id" name="student-id"><br><br>
 
                 <label for="amount">Amount to Pay:</label><br>
-                <input type="number" id="amount" name="amount" min="0" required><br><br>
+                <input type="number" id="amount" name="amount" min="0"><br><br>
 
                 <label for="credit-card">Credit Card Number:</label><br>
-                <input type="text" id="credit-card" name="credit-card" pattern="[0-9]{16}" required><br><br>
+                <input type="text" id="credit-card" name="credit-card" p><br><br>
 
                 <label for="expiration-date">Expiration Date:</label><br>
-                <input type="text" id="expiration-date" name="expiration-date" placeholder="MM/YY" pattern="(0[1-9]|1[0-2])\/\d{2}" required><br><br>
+                <input type="text" id="expiration-date" name="expiration-date" placeholder="MM/YY" ><br><br>
 
                 <label for="cvv">CVV:</label><br>
-                <input type="text" id="cvv" name="cvv" pattern="[0-9]{3}" required><br><br>
+                <input type="text" id="cvv" name="cvv" ><br><br>
 
                 <input type="submit" value="Pay Now">
             </form>
