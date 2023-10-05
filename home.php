@@ -1,7 +1,20 @@
 <?php
    if (isset($_POST['submit'])) {
         $username = $_POST['username'];
-        echo "<script>console.log($username);</script>";
+        $password = $_POST['password'];
+
+
+        // $usernamePattern = '/^[A-Za-z]+$/';
+        // if ( preg_match($usernamePattern, $username) ) {
+
+        //     echo 'string contains only alphabets';
+        // } else {
+        //     echo 'string does not contain only alphabets';
+        // }
+   }
+
+   function validateAlphabet($input) {
+        return preg_match('/^[a-zA-Z]+$/', $input);
    }
 ?>
 
