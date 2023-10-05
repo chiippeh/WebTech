@@ -1,3 +1,10 @@
+<?php
+   if (isset($_POST['submit'])) {
+        $username = $_POST['username'];
+        echo "<script>console.log($username);</script>";
+   }
+?>
+
 <!--Created in collaboration with:-->
 <!--Mila-jo Davies (g21d6937), Wynne Edwards (g21e2079), Manusizwe Jourdan (g21j5408)-->
 <!DOCTYPE html>
@@ -20,11 +27,11 @@
         <div id="home-container" class="main-container center">
             <div id="welcome">Welcome to LOSS</div>
             <br><br>
-            <form action="#" method="POST">
+            <form action="home.php" method="POST">
                 <label for="username">Username</label><br>
-                <input type="text" name="username"><br>
+                <input type="text" id="username" name="username"><br>
                 <label for="password">Password</label><br>
-                <input type="text" name="password"><br><br>
+                <input type="text" id="password" name="password"><br><br>
                 <input type="submit" name="submit" value="Sign In">
             </form>
             <br><br>

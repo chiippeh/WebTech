@@ -123,6 +123,7 @@ nav a * {
     font-size: 16px;
     border: none;
     cursor: pointer;
+    background-color: #323232;
 }
 
 .dropdown {
@@ -372,11 +373,19 @@ nav a * {
     border:2px solid black;
   }
 
+#signup-forgot-container {
+    /* margin: auto; */
+    width: 100%;
+}
 
+#signup {
+    text-align: left;
+    margin: 0 0 0 5%;
+}
 
-#login, #signup {
-    margin: 0 0 0 40%;
-    width: 25%;
+#forgot {
+    text-align: right;
+    margin: 0 5% 0 0;
 }
 
 /* ----------------- home.html ---------------------- */
