@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Condensed">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="js/script.js" defer></script>
-    <script src="js/benchForm.js" defer></script>
+    <script src="js/honoursForm.js" defer></script>
 </head>
 
 <body>
@@ -52,50 +52,53 @@
 
     <main class="center">
         <p>
-            The closing date to apply for a seat on the Depression Bench is 1 November 2027. If you have not applied for
-            a seat by this date then you will not be allocated a seat on a Depression Bench for 2028. It is up to you to
-            ensure that your payment arrangements are cleared by the CFO before 1 January 2028, so that if a seat
-            becomes available you can be allocated it.
+            I see you have come to apply for Honours as you have nothing better to do with your life. JK Honours is an honour to experience and you should feel honoured to even have the opportunity to apply.
         </p>
         <br>
         <p>
-            Please note that booking an entire Depression Bench for yourself results in additional charges, so please
-            indicate your preference clearly in the form below.
+            Please note that you must indicate the subject you would like to do honours in as well as your reason for choosing honours. The reason is just to help motivate why we should choose you.
         </p>
         <br>
         <p>
-            To cancel your application for a Depression Bench, please contact the CEO directly.
+            When you have completed the form, click "submit" to proceed to the next step.
         </p>
         <br>
-        <div id="errorMessages" ></div>
-        <div class="bubble">
-            <form name="bench" action="#" onsubmit="return validateBench()">
+        <div id="hon-form" class="bubble">
+            <form action="#">
                 <label for="fname">First name:</label><br>
-                <input type="text" id="fname" name="fname"><br>
-
+                <input type="text" id="fname" name="fname" ><br>
                 <label for="lname">Last name:</label><br>
                 <input type="text" id="lname" name="lname" ><br>
-
                 <label for="snum">Student number:</label><br>
                 <input type="text" id="snum" name="snum" ><br><br>
-
-                <p>Number of seats:</p>
+                <p>Subject:</p>
                 <input type="radio" id="one" name="seat" value="One">
-                <label for="one">One (R500.00)</label><br>
+                <label for="one">Computer Science</label><br>
                 <input type="radio" id="two" name="seat" value="Two">
-                <label for="two">Two (R750.00)</label><br>
-                <input type="radio" id="three" name="seat" value="Three">
-                <label for="three">Three (R1000.00)</label><br>
-                <input type="radio" id="bench" name="seat" value="All">
-                <label for="bench">Entire bench (R5000.00)</label><br><br>
-                <input type="submit" name="submit" value="Submit"> <input type="submit" name="submit" value="Cancel" style="margin-left: 15% ;">
+                <label for="two">Information Systems</label><br>
+                <input type="radio" id="three" name="seat" value="Three" >
+                <label for="three">Literally Anything Else</label><br><br>
+                <p>Reason for wanting to attempt honours:</p>
+                <input type="radio" id="one" name="a" value="One">
+                <label for="one">I am passionate about studying</label><br>
+                <input type="radio" id="two" name="b" value="Two">
+                <label for="two">It is required for my particular field</label><br>
+                <input type="radio" id="three" name="c" value="Three">
+                <label for="three">This is an impulse decision</label><br>
+                <input type="radio" id="one" name="d" value="One">
+                <label for="one">I don't know what else to do</label><br>
+                <input type="radio" id="two" name="e" value="Two">
+                <label for="two">I am afraid of the real world</label><br>
+                <input type="radio" id="three" name="f" value="Three">
+                <label for="three">I got rejected from every job application</label><br><br>
+                <input id="lol" type="submit" name="submit" value="Submit"> <input type="submit" name="submit" value="Cancel" style="margin-left: 15% ;">
             </form>
-        </div> <br>
-
-        <p>
-            Please note that the above booking is only applicable for the FIRST SEMESTER of 2028. Bookings will need to be renewed for the second semester in May of 2028.
-        </p>
+        </div>
         <br>
+        <div id="last-laugh" style="display:none;">
+            
+        </div><br>
+       
     </main>
 
     <footer>

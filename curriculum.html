@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Condensed">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <script src="js/script.js" defer></script>
+        <script src="js/curriculum.js" defer></script>
     </head>
     
     <body>
@@ -36,13 +37,13 @@
                     <span class="material-icons">list_alt</span>
                     <p class="nav-btn-text">My Bookings</p>
                 </a>
-                <a onclick="myFunction()" class="dropdown dropbtn" >
+                <a onclick="myFunction()" class="dropdown dropbtn">
                     <span class="material-icons">tune</span>
                     <p class="nav-btn-text">My Utilities</p>
                     <div id="myDropdown" class="dropdown-content">
-                        <a href="">Test</a>
-                        <a href="">Test</a>
-                        <a href="">Test</a>
+                        <a href="./images/mankyrat.png">Manky</a>
+                        <a href="https://x.com/catshouldnt/status/1706917149984657713?s=20">Cat</a>
+                        <a href="https://www.youtube.com/watch?v=L1ung0wil9Y&ab_channel=MITOpenCourseWare">Secret</a>
                     </div>
                 </a>
             </div>
@@ -52,17 +53,23 @@
             <p>Get your degree <a href="https://www.youtube.com/watch?v=zuegQmMdy8M">here</a></p>
             <br>
             <div id="slideshow-gallery-container">
-                <div id="left-btn"><</div>
-                <div id="slideshow-gallery">
+                <button onclick="plusSlides(-1)" id="left-btn"><</button>
+                <div id="slideshow-gallery" >
                     <img src="images/grad.jpg" alt="">
                     <img src="images/graduation.webp" alt="">
                     <img src="images/graduate.jpg" alt="">
+                    <img src="images/mankyrat.png" alt="">
                 </div>
-                <div id="right-btn">></div>
+                <button onclick="plusSlides(1)" id="right-btn">></button>
             </div>
-            <br>
+            <br><br>
             <h3>Ode to Curriculum</h3>
-            <hr>
+            <hr>    
+            <br>
+            <p>Change the number of columns in the poem below</p>
+            <input type="text" name="col-num" id="col-num" placeholder="Change column number" >
+            <button onclick="changeColNum()">Change</button>
+            <br><br>
             <div id="marks">
                 In the hallowed halls of knowledge's keep,
                 A curriculum unfolds, in shadows deep.

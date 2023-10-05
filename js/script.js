@@ -6,7 +6,6 @@ const cookiesEnabled = navigator.cookieEnabled;
 
 // const footer = document.querySelector('footer');
 const bottomFooter = document.getElementById('bottom-footer');
-const dashboard = document.querySelectorAll('.dashboard');
 
 // I couldn't implement the Slide Down a Bar on Scroll without using javascript :(
 
@@ -39,15 +38,6 @@ if (!event.target.matches('.dropbtn')) {
   }
 }
 
-dashboard.forEach(element => {
-  element.addEventListener('click', function() {
-    // Code to run when a .dashboard element is clicked
-    console.log('Dashboard element clicked');
-    navigator.vibrate(5000);
-    // Add your specific code here
-  });
-});
-
 // Add brower language indicator to footer
 let browserInfo = document.createElement("div");// create div
 let cookieSymbol = "";
@@ -59,26 +49,3 @@ if (cookiesEnabled) {
 browserInfo.innerHTML = `Browser Language: ${lanugage}&nbsp&nbsp&nbsp-&nbsp&nbsp&nbsp Cookies? ${cookieSymbol}`;
 browserInfo.classList.add("center");
 bottomFooter.appendChild(browserInfo);
-
-
-
-
-
-
-
-
-
-const clickRatL = document.getElementById('big-rat');
-const clickRatR = document.getElementById('new-rat');
-
-//changes the webpage when the left rat is clicked
-clickRatL.addEventListener('click', () => {
-    document.body.style.backgroundColor = 'black';
-    document.getElementById('easter-egg').style.display = 'block';
-});
-
-//changes the webpage when the right rat is clicked
-clickRatR.addEventListener('click', () => {
-  document.body.style.backgroundColor = 'white';
-  document.getElementById('easter-egg').style.display = 'none';
-});
