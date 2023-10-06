@@ -1,21 +1,41 @@
 <?php
-   if (isset($_POST['submit'])) {
-        $username = $_POST['username'];
-        $password = $_POST['password'];
+    require_once('validate.php');
 
+    if($_SERVER["REQUEST_METHOD"] == "POST") { //if the submit button has been pressed
+        $userNameErr = $passwordErr = "";
 
-        // $usernamePattern = '/^[A-Za-z]+$/';
-        // if ( preg_match($usernamePattern, $username) ) {
+        if (empty($_POST["username"])) {
+            $nameErr = "Username is required";
+        } else {
+            $username = sanitiseInput($_POST["username"]);
 
-        //     echo 'string contains only alphabets';
-        // } else {
-        //     echo 'string does not contain only alphabets';
-        // }
-   }
+            // validate username
+            $errors  = validateAlphabet($username);
+            if (empty($errors)) { //is valid
+                
+            } else {
+                foreach ($errors as $error) {
+                    echo $error . "<br>";
+                }
+            }
+        }
 
-   function validateAlphabet($input) {
-        return preg_match('/^[a-zA-Z]+$/', $input);
-   }
+        if (empty($_POST["password"])) {
+            $nameErr = "Password is required";
+        } else {
+            $username = sanitiseInput($_POST["password"]);
+            
+            // validate password
+            $errors = validatePassword($password);
+            if (empty($errors)) {
+                echo "Password is valid.";
+            } else {
+                foreach ($errors as $error) {
+                    echo $error . "<br>";
+                }
+            }
+        }
+    }
 ?>
 
 <!--Created in collaboration with:-->
@@ -38,13 +58,17 @@
     </header>
     <main>
         <div id="home-container" class="main-container center">
-            <div id="welcome">Welcome to LOSS</div>
-            <br><br>
-            <form action="home.php" method="POST">
+            <!-- <div id="welcome">Welcome to LOSS</div>
+            <br><br> -->
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
                 <label for="username">Username</label><br>
                 <input type="text" id="username" name="username"><br>
+                <span class="error">* <?php echo $userNameErr;?></span>
+            
                 <label for="password">Password</label><br>
                 <input type="text" id="password" name="password"><br><br>
+                <span class="error">* <?php echo $passwordErr;?></span>
+
                 <input type="submit" name="submit" value="Sign In">
             </form>
             <br><br>
