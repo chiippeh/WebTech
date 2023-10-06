@@ -9,8 +9,8 @@
     function validateAlphabet($input) {
         $errors = [];
 
-        if (!(preg_match('/^[a-zA-Z]+$/', $input))) {
-            $errors[] = "User name can only contain alphanumeric characters";
+        if (!(preg_match('/^g\d{2}[a-zA-Z]\d{4}$/', $input))) {
+            $errors[] = "Format: g[year][surname-initial][4-digits] eg: g21j4308";
         }
         return $errors;
     }
@@ -43,6 +43,6 @@
         }
     
         return $errors;
-    }
+    }   
     
 ?>
