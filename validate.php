@@ -9,6 +9,20 @@
     function validateAlphabet($input) {
         $errors = [];
 
+        if (!(preg_match('/[a-zA-Z]/', $input))) {
+            $errors[] = "Name should only contain letters from the alphabet.";
+        }
+
+        if (strlen($input) > 20) {
+            $errors[] = "Name must be no longer than 20 characters long.";
+        }
+    
+        return $errors;
+    }
+
+    function validateUsername($input) {
+        $errors = [];
+
         if (!(preg_match('/^g\d{2}[a-zA-Z]\d{4}$/', $input))) {
             $errors[] = "Format: g[year][surname-initial][4-digits] eg: g21j4308";
         }

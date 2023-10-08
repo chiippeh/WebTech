@@ -100,7 +100,7 @@
                 <span><?php echo $usernameRequiredErr ?></span>
                 <br><br>
                 <label for="password">Password</label><br>
-                <input class="focus-input" type="text" id="password" name="password" value="<?php echo $password;?>">
+                <input class="focus-input" type="password" id="password" name="password" value="<?php echo $password;?>">
                 <span><?php echo $passwordRequiredErr ?></span>
                 <div class="popup" id="popup">
                     <h4>Input Requirements</h2><br>

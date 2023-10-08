@@ -1,57 +1,104 @@
 <?php
-    $usernameErr = $passwordErr = "";
-    $username = $password = "";
+    
+    $nameRequiredErr = $surnameRequiredErr = $usernameRequiredErr =  $passwordRequiredErr = "";
+    $nameValid = $surnameValid = $usernameValid = $passwordValid = $confirmPasswordValid = false;
 
     if($_SERVER["REQUEST_METHOD"] == "POST") { //if the submit button has been pressed
         require_once('validate.php');
         require_once('conn.php');
 
+        if(empty($_POST["fname"])) {
+            $nameRequiredErr = "* First name is required";
+        }else {
+            echo "you have entered something";
+            $fname = sanitiseInput($_POST["fname"]);
+
+            // validate name
+            $errors  = validateAlphabet($fname); 
+
+            if(empty($errors)){
+                echo "it should never get here";
+                $nameValid = true;
+            }
+        }
+
+        if(empty($_POST["lname"])) {
+            $surnameRequiredErr = "* Surname is required";
+        }else {
+            $lname = sanitiseInput($_POST["lname"]);
+
+            //validate surname
+            $errors = validateAlphabet($lname);
+
+            if(empty($errors)){
+                $surnameValid = true;
+            }
+        }
+
         if (empty($_POST["username"])) {
             echo "<script>console.log(you have entered nothing);</script>";
-            $usernameErr = "* Username is required";
+            $usernameRequiredErr = "* Username is required";
+            
         } else {
             echo "you have entered something";
             $username = sanitiseInput($_POST["username"]);
 
             // validate username
-            $errors  = validateAlphabet($username);
-            echo "hello {$errors}";
+            $errors  = validateUsername($username);
             
             if (empty($errors)) { //is valid
+                echo "<br>usernameis valid<br>";
+                $usernameValid = true;
 
-                // $query = "SELECT * FROM students";
-                // $result = mysqli_query($conn, $query);  //run query on database
-                // while ($row = mysqli_fetch_array($result)) {
-                //     echo $row['student_fname'];
-                //     echo "<br>";
-                // }
-                // $result = mysqli_fetch_array($result);
-
-            } else {
-                // $usernameErr = "* ";
-                foreach ($errors as $error) {
-                    $usernameErr .= $error;
-                }
             }
         }
 
         if (empty($_POST["password"])) {
-            $passwordErr = "* Password is required";
+            $passwordRequiredErr = "* Password is required";
         } else {
             $password = sanitiseInput($_POST["password"]);
             
             // validate password
             $errors = validatePassword($password);
+
             if (empty($errors)) {
                 echo "Password is valid.";
-            } else {
-                $passwordErr = "* ";
-                foreach ($errors as $error) {
-                    $passwordErr .= $error;
+                $passwordValid = true;
+            }
+        }
+
+        if (empty($_POST["confirm-pass"])) {
+            $passwordRequiredErr = "* Password is required";
+        } else {
+            $confirmPassword = sanitiseInput($_POST["confirm-pass"]);
+            
+            // validate password
+            $errors = validatePassword($confirmPassword);
+            if (empty($errors)) {
+                echo "Confirm Password is valid.";
+                echo $password;
+                if ($password == $confirmPassword) {
+                    $confirmPasswordValid = true;
+                    echo $confirmPassword;
+                } else {
+                    echo "you idiot the password are not the same";
                 }
             }
         }
+
+        // if all the inputs are valid
+        if ($nameValid && $surnameValid && $usernameValid && $passwordValid && $confirmPasswordValid) {
+            echo "<br>all inputs are valid<br>";
+            $encryptedPassword = sha1($password);
+            $query = "INSERT INTO students (`student_num`, `student_fname`, `student_lname`, `student_password`)
+                      VALUES ('$username', '$fname', '$lname', '$encryptedPassword');";
+                      
+            $result = mysqli_query($conn, $query);
+
+
+        }
     }
+ 
 ?>
 
 <!DOCTYPE html>
@@ -74,7 +121,7 @@
         <div id="home-container" class="main-container center">
             <!-- <div id="welcome">Welcome to LOSS</div>
             <br><br> -->
-            <form id="sign-up" action="#" method="POST">
+            <form id="sign-up" action="" method="POST">
                 <label for="fname">First Name:</label><br>
                 <input class="focus-input" type="text" id="fname" name="fname" value="">
                 <br><br>
@@ -82,18 +129,30 @@
                 <input class="focus-input" type="text" id="lname" name="lname" value="">
                 <br><br>
                 <label for="username">Username:</label><br>
-                <input class="focus-input" type="text" id="username" name="username" value="<?php echo $username;?>">
+                <input class="focus-input" type="text" id="username" name="username" value="">
                 <br><br>
                 <label for="password">Password:</label><br>
-                <input class="focus-input" type="text" id="password" name="password" value="<?php echo $password;?>">
+                <input class="focus-input" type="password" id="password" name="password" value="">
                 <br><br>
                 <label for="confirm-pass">Confirm Password:</label><br>
-                <input class="focus-input" type="text" id="confirm-pass" name="confirm-pass" value="">
+                <input class="focus-input" type="password" id="confirm-pass" name="confirm-pass" value="">
                 <div class="popup" id="popup">
                     <h4>Input Requirements</h2><br>
                     <span class="close" id="close-popup">&times;</span>
-                    <?php echo " Username:<br>{$usernameErr}<br>"; ?>
-                    <?php echo " Password:<br>{$passwordErr}<br>"; ?>
+                    <?php 
+                        echo " Username must contain:<br>
+                        Format: g[year][surname-initial][4-digits] eg: g21j4308
+                        <br><br>"; 
+                    ?>
+                    <?php 
+                        echo " 
+                            Password must contain:<br> At least one uppercase letter.<br>
+                            At least one lowercase letter.<br>
+                            At least one number.<br>
+                            At least one special character.<br>
+                            Must be at least 8 characters long.<br>
+                            <br>"; 
+                    ?>
                 </div>
                 <br><br>
 
