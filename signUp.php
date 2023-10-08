@@ -1,7 +1,7 @@
 <?php
     
-    $nameRequiredErr = $surnameRequiredErr = $usernameRequiredErr =  $passwordRequiredErr = "";
-    $nameValid = $surnameValid = $usernameValid = $passwordValid = $confirmPasswordValid = false;
+    $nameRequiredErr = $surnameRequiredErr = $usernameRequiredErr =  $passwordRequiredErr = $emailRequiredErr = "";
+    $nameValid = $surnameValid = $usernameValid = $passwordValid = $confirmPasswordValid = $emailValid = false;
 
     if($_SERVER["REQUEST_METHOD"] == "POST") { //if the submit button has been pressed
         require_once('validate.php');
@@ -53,6 +53,19 @@
             }
         }
 
+        if (empty($_POST["email"])) {
+            $emailRequiredErr = "* Email is required";
+        } else {
+            $email = sanitiseInput($_POST["email"]);
+
+            //validate email
+            $errors = validateEmail($email);
+
+            if(empty($errors)) {
+                $emailValid = true;
+            }
+        }
+
         if (empty($_POST["password"])) {
             $passwordRequiredErr = "* Password is required";
         } else {
@@ -87,15 +100,13 @@
         }
 
         // if all the inputs are valid
-        if ($nameValid && $surnameValid && $usernameValid && $passwordValid && $confirmPasswordValid) {
+        if ($nameValid && $surnameValid && $usernameValid && $passwordValid && $confirmPasswordValid && $emailValid) {
             echo "<br>all inputs are valid<br>";
             $encryptedPassword = sha1($password);
-            $query = "INSERT INTO students (`student_num`, `student_fname`, `student_lname`, `student_password`)
-                      VALUES ('$username', '$fname', '$lname', '$encryptedPassword');";
+            $query = "INSERT INTO students (`student_num`, `student_fname`, `student_lname`, `student_email`, `student_password`)
+                      VALUES ('$username', '$fname', '$lname', '$email', '$encryptedPassword');";
                       
             $result = mysqli_query($conn, $query);
-
-
         }
     }
  
@@ -130,6 +141,9 @@
                 <br><br>
                 <label for="username">Username:</label><br>
                 <input class="focus-input" type="text" id="username" name="username" value="">
+                <br><br>
+                <label for="email">Email:</label><br>
+                <input class="focus-input" type="text" id="email" name="email" value="">
                 <br><br>
                 <label for="password">Password:</label><br>
                 <input class="focus-input" type="password" id="password" name="password" value="">
