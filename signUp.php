@@ -54,8 +54,6 @@
     }
 ?>
 
-<!--Created in collaboration with:-->
-<!--Mila-jo Davies (g21d6937), Wynne Edwards (g21e2079), Manusizwe Jourdan (g21j5408)-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -76,12 +74,21 @@
         <div id="home-container" class="main-container center">
             <!-- <div id="welcome">Welcome to LOSS</div>
             <br><br> -->
-            <form id="login" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
-                <label for="username">Username</label><br>
+            <form id="sign-up" action="#" method="POST">
+                <label for="fname">First Name:</label><br>
+                <input class="focus-input" type="text" id="fname" name="fname" value="">
+                <br><br>
+                <label for="lname">Surname:</label><br>
+                <input class="focus-input" type="text" id="lname" name="lname" value="">
+                <br><br>
+                <label for="username">Username:</label><br>
                 <input class="focus-input" type="text" id="username" name="username" value="<?php echo $username;?>">
                 <br><br>
-                <label for="password">Password</label><br>
+                <label for="password">Password:</label><br>
                 <input class="focus-input" type="text" id="password" name="password" value="<?php echo $password;?>">
+                <br><br>
+                <label for="confirm-pass">Confirm Password:</label><br>
+                <input class="focus-input" type="text" id="confirm-pass" name="confirm-pass" value="">
                 <div class="popup" id="popup">
                     <h4>Input Requirements</h2><br>
                     <span class="close" id="close-popup">&times;</span>
@@ -90,12 +97,12 @@
                 </div>
                 <br><br>
 
-                <input type="submit" name="submit" id="submitBtn" value="Sign In">
+                <input type="submit" name="submit" id="submitBtn" value="Sign Up">
             </form>
             <br><br>
             <div id="signup-forgot-container">
                 <div id="signup">
-                    New here? <a href="./signUp.php" >Apply!</a>
+                    Already have an account? <a href="./home.php" >Sign In!</a>
                 </div>
                 <div id="forgot">
                     Forgot Password?
