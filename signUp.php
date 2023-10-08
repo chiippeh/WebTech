@@ -1,5 +1,4 @@
 <?php
-    
     $nameRequiredErr = $surnameRequiredErr = $usernameRequiredErr =  $passwordRequiredErr = $emailRequiredErr = "";
     $nameValid = $surnameValid = $usernameValid = $passwordValid = $confirmPasswordValid = $emailValid = false;
 
@@ -106,7 +105,12 @@
             $query = "INSERT INTO students (`student_num`, `student_fname`, `student_lname`, `student_email`, `student_password`)
                       VALUES ('$username', '$fname', '$lname', '$email', '$encryptedPassword');";
                       
-            $result = mysqli_query($conn, $query);
+            $result = mysqli_query($conn, $query)
+            or die("cringe");
+
+            header("Location:home.php");
+
+
         }
     }
  
@@ -176,9 +180,6 @@
             <div id="signup-forgot-container">
                 <div id="signup">
                     Already have an account? <a href="./home.php" >Sign In!</a>
-                </div>
-                <div id="forgot">
-                    Forgot Password?
                 </div>
             </div>   
         </div> 
