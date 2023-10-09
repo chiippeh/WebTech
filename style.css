@@ -95,11 +95,13 @@ nav {
     height: 100%;
 }
 
+
+
 nav a {
     display: inline-block;
     text-decoration: none;
     height: 100%;
-    width: 19%;
+    width: 16%;
     text-align: center;
     padding: 1.5vh 0 0 0;
     color: #ffff;
