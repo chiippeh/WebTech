@@ -1,4 +1,5 @@
 <?php
+    // ob_start();
     session_start();
     
     $usernameErr = $passwordErr = "";
@@ -70,13 +71,13 @@
             $result = mysqli_query($conn, $query);  //run query on database
 
             if (mysqli_num_rows($result) == 1) {
-                $_SESSIOM['acesss'] = 'granted';
+                $_SESSION['access'] = "granted";
                 // ob_end_flush();
-                // header("Location: Index/index.php");
-                // header("Location: example.php");
+                header("Location: Index/index.php");
                 exit();
             } else {
-                echo "account does not exist";
+                // echo "account does not exist";
+                header("Location: home.php");
             }
             mysqli_close($conn);
         }
