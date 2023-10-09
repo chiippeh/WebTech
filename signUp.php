@@ -189,9 +189,6 @@
                 <div id="signup">
                     Already have an account? <a href="./home.php" >Sign In!</a>
                 </div>
-                <div id="forgot">
-                    Forgot Password?
-                </div>
             </div>   
         </div> 
     </main>
