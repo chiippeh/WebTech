@@ -4,46 +4,34 @@
     $usernameErr = $passwordErr = "";
     $username = $password = "";
     $usernameRequiredErr =  $passwordRequiredErr = "";
+    $usernameValid = $passwordValid = false;
+
+
+    if($_SERVER["REQUEST_METHOD"] == "GET") { //if the user signs up they will be redirected with their username
+        if (!empty($_GET["username"])) {
+            $username = $_GET["username"];
+            // echo "the query username is {$username}";
+            $usernameValid = true;
+        }
+    }
 
     if($_SERVER["REQUEST_METHOD"] == "POST") { //if the submit button has been pressed
         require_once('validate.php');
         require_once('conn.php');
 
         if (empty($_POST["username"])) {
-            echo "<script>console.log(you have entered nothing);</script>";
+            // echo "<script>console.log(you have entered nothing);</script>";
             $usernameRequiredErr = "* Username is required";
             
         } else {
-            echo "you have entered something";
+            // echo "you have entered something";
             $username = sanitiseInput($_POST["username"]);
 
             // validate username
-            $errors  = validateAlphabet($username);
+            $errors  = validateUsername($username);
             
             if (empty($errors)) { //is valid
-
-                $query = "SELECT * 
-                          FROM students
-                          WHERE student_num = $username
-                          AND student_password = $password";
-
-                $result = mysqli_query($conn, $query);  //run query on database
-
-                if (mysqli_num_rows($result) == 1) {
-                    $_SESSIOM['acesss'] = 'granted';
-
-                    header("Location:index.html");
-                } else {
-
-                }
-
-                mysqli_close($conn);
-
-                // while ($row = mysqli_fetch_array($result)) {
-                //     echo $row['student_fname'];
-                //     echo "<br>";
-                // }
-                // $result = mysqli_fetch_array($result);
+                $usernameValid = true;
 
             } else {
                 // $usernameErr = "* ";
@@ -61,13 +49,36 @@
             // validate password
             $errors = validatePassword($password);
             if (empty($errors)) {
-                echo "Password is valid.";
+                // echo "Password is valid.";
+                $passwordValid = true;
             } else {
                 $passwordErr = "* ";
                 foreach ($errors as $error) {
                     $passwordErr .= $error;
                 }
             }
+        }
+
+        if ($usernameValid && $passwordValid) {
+            $encryptedPassword = sha1($password);
+
+            $query = "SELECT * 
+                      FROM students
+                      WHERE student_num = '$username'
+                      AND student_password = '$encryptedPassword'";
+
+            $result = mysqli_query($conn, $query);  //run query on database
+
+            if (mysqli_num_rows($result) == 1) {
+                $_SESSIOM['acesss'] = 'granted';
+                // ob_end_flush();
+                // header("Location: Index/index.php");
+                // header("Location: example.php");
+                exit();
+            } else {
+                echo "account does not exist";
+            }
+            mysqli_close($conn);
         }
     }
 ?>
@@ -96,12 +107,12 @@
             <br><br> -->
             <form id="login" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
                 <label for="username">Username</label><br>
-                <input class="focus-input" type="text" id="username" name="username" value="<?php echo $username;?>">
-                <span><?php echo $usernameRequiredErr ?></span>
+                <input class="focus-input" type="text" id="username" name="username" placeholder="Enter your studentnumber" value="<?php echo $username;?>">
+                <span id="required-err"><?php echo $usernameRequiredErr ?></span>
                 <br><br>
                 <label for="password">Password</label><br>
                 <input class="focus-input" type="password" id="password" name="password" value="<?php echo $password;?>">
-                <span><?php echo $passwordRequiredErr ?></span>
+                <span id="required-err"><?php echo $passwordRequiredErr ?></span>
                 <div class="popup" id="popup">
                     <h4>Input Requirements</h2><br>
                     <span class="close" id="close-popup">&times;</span>
