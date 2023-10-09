@@ -415,6 +415,7 @@ nav a * {
     background: #f9f9f9;
     padding: 20px;
     width: 50%;
+    font-size: calc(9px + 0.3vw);
 }
 
 .close {
@@ -431,6 +432,25 @@ ul {
 
 ul li {
     margin-bottom: 10px;
+}
+
+#required-err {
+    font-size: calc(9px + 0.3vw);
+}
+
+#success-popup {
+    position: absolute;
+    top: 10vh;
+    /* left: 20%; */
+    left: 20vw;
+    width: 60%;
+    height: 75%;
+    z-index: 3;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+    border-radius: 25px;
+    font-size: calc(20px + 0.3vw);
+    text-align: center;
 }
 
 /* ----------------- home.html ---------------------- */

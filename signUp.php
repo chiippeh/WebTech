@@ -1,5 +1,6 @@
 <?php
     
+    $fname = $lname = $email = $password = $confirmPassword = "";
     $nameRequiredErr = $surnameRequiredErr = $usernameRequiredErr =  $passwordRequiredErr = $emailRequiredErr = "";
     $nameValid = $surnameValid = $usernameValid = $passwordValid = $confirmPasswordValid = $emailValid = false;
 
@@ -10,14 +11,12 @@
         if(empty($_POST["fname"])) {
             $nameRequiredErr = "* First name is required";
         }else {
-            echo "you have entered something";
             $fname = sanitiseInput($_POST["fname"]);
 
             // validate name
             $errors  = validateAlphabet($fname); 
 
             if(empty($errors)){
-                echo "it should never get here";
                 $nameValid = true;
             }
         }
@@ -35,23 +34,23 @@
             }
         }
 
-        if (empty($_POST["username"])) {
-            echo "<script>console.log(you have entered nothing);</script>";
-            $usernameRequiredErr = "* Username is required";
+        // if (empty($_POST["username"])) {
+        //     echo "<script>console.log(you have entered nothing);</script>";
+        //     $usernameRequiredErr = "* Username is required";
             
-        } else {
-            echo "you have entered something";
-            $username = sanitiseInput($_POST["username"]);
+        // } else {
+        //     echo "you have entered something";
+        //     $username = sanitiseInput($_POST["username"]);
 
-            // validate username
-            $errors  = validateUsername($username);
+        //     // validate username
+        //     $errors  = validateUsername($username);
             
-            if (empty($errors)) { //is valid
-                echo "<br>usernameis valid<br>";
-                $usernameValid = true;
+        //     if (empty($errors)) { //is valid
+        //         echo "<br>usernameis valid<br>";
+        //         $usernameValid = true;
 
-            }
-        }
+        //     }
+        // }
 
         if (empty($_POST["email"])) {
             $emailRequiredErr = "* Email is required";
@@ -100,13 +99,21 @@
         }
 
         // if all the inputs are valid
-        if ($nameValid && $surnameValid && $usernameValid && $passwordValid && $confirmPasswordValid && $emailValid) {
+        if ($nameValid && $surnameValid && $passwordValid && $confirmPasswordValid && $emailValid) {
             echo "<br>all inputs are valid<br>";
             $encryptedPassword = sha1($password);
+            $username = "g" . substr(date("Y"), 2) . strtolower(substr($lname, 0, 1)) . rand(1000,9999);
             $query = "INSERT INTO students (`student_num`, `student_fname`, `student_lname`, `student_email`, `student_password`)
                       VALUES ('$username', '$fname', '$lname', '$email', '$encryptedPassword');";
                       
             $result = mysqli_query($conn, $query);
+            echo "<div id=\"success-popup\">
+                    You have successfully been signed up!
+                    <br>
+                    Your username is: {$username}
+                    <br><br>
+                    <a href=\"home.php?username=" . $username .     "\"><button>Login</button></a>
+                  </div>";
         }
     }
  
@@ -134,22 +141,27 @@
             <br><br> -->
             <form id="sign-up" action="" method="POST">
                 <label for="fname">First Name:</label><br>
-                <input class="focus-input" type="text" id="fname" name="fname" value="">
+                <input class="focus-input" type="text" id="fname" name="fname" value="<?php echo $fname;?>">
+                <span id="required-err"><?php echo $nameRequiredErr ?></span>
                 <br><br>
                 <label for="lname">Surname:</label><br>
-                <input class="focus-input" type="text" id="lname" name="lname" value="">
+                <input class="focus-input" type="text" id="lname" name="lname" value="<?php echo $lname;?>">
+                <span id="required-err"><?php echo $surnameRequiredErr ?></span>
                 <br><br>
-                <label for="username">Username:</label><br>
+                <!-- <label for="username">Username:</label><br>
                 <input class="focus-input" type="text" id="username" name="username" value="">
-                <br><br>
+                <br><br> -->
                 <label for="email">Email:</label><br>
-                <input class="focus-input" type="text" id="email" name="email" value="">
+                <input class="focus-input" type="text" id="email" name="email" value="<?php echo $email;?>">
+                <span id="required-err"><?php echo $emailRequiredErr ?></span>
                 <br><br>
                 <label for="password">Password:</label><br>
-                <input class="focus-input" type="password" id="password" name="password" value="">
+                <input class="focus-input" type="password" id="password" name="password" value="<?php echo $password;?>">
+                <span id="required-err"><?php echo $passwordRequiredErr ?></span>
                 <br><br>
                 <label for="confirm-pass">Confirm Password:</label><br>
-                <input class="focus-input" type="password" id="confirm-pass" name="confirm-pass" value="">
+                <input class="focus-input" type="password" id="confirm-pass" name="confirm-pass" value="<?php echo $confirmPassword;?>">
+                <span id="required-err"><?php echo $passwordRequiredErr ?></span>
                 <div class="popup" id="popup">
                     <h4>Input Requirements</h2><br>
                     <span class="close" id="close-popup">&times;</span>
