@@ -73,7 +73,7 @@
             if (mysqli_num_rows($result) == 1) {
                 $_SESSION['access'] = "granted";
                 // ob_end_flush();
-                header("Location: Index/index.php");
+                header("Location: index.php");
                 exit();
             } else {
                 // echo "account does not exist";
