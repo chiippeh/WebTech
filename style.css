@@ -417,6 +417,8 @@ button.material-icons {
 #signup-forgot-container {
     /* margin: auto; */
     width: 100%;
+    position: relative;
+    bottom:1em;
 }
 
 #signup {
@@ -609,6 +611,9 @@ footer {
     body {
         margin-left: 15%;
     }
+    .no-shrink{
+        margin-left: 0;
+    }
     .main-container{
         width: 90%;
     }
@@ -640,6 +645,9 @@ footer {
 
     body {
         margin-left: 10%;
+    }
+    .no-shrink{
+        margin-left: 0;
     }
 
 }
