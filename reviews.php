@@ -2,6 +2,7 @@
 
     require_once("BackendFiles/secure.php");
     require_once('conn.php');
+    $student_num = $_SESSION['student_num'];
 
     $query = "SELECT reviews.date, reviews.review_stuff, reviews.rating, students.student_fname, students.student_lname
               FROM reviews
@@ -43,7 +44,7 @@
 <body>
     <header id="header">
         <h3 id="header-container">
-            Logged into LOSS as YoMamma
+            Logged into LOSS as <?php echo $student_num ?>
         </h3>
     </header>
     <nav>
@@ -81,16 +82,20 @@
 
     <main class="center">
         <div class="bubble" id="reviews">
-            <h2 class='center'>Reviews:</h2><br>
-            <?php
-                while($row = mysqli_fetch_array($user_reviews)) {
-                    echo "<div id=\"review-comment\"
-                        
-                        {$row['date']} <br>";
-                    echo "{$row['student_fname']}   {$row['student_lname']}   {$row['rating']} <br>";
-                    echo "{$row['review_stuff']} <br><br>";
-                }
-            ?>
+            <p class="material-icons" >radio_button_checked</p><h2 class='center'>Reviews:</h2><br>
+            <div id="hidden-reviews">
+                <?php
+                    while($row = mysqli_fetch_array($user_reviews)) {
+                        echo "<div id=\"review-comment\">
+                                    <strong>{$row['student_fname']}   {$row['student_lname']}  &nbsp | &nbsp {$row['rating']} stars </strong> 
+                                    <div style=\"float:right;\">{$row['date']}</div> <br><br>
+                                    {$row['review_stuff']} 
+                                    <br><br>
+                                </div>
+                                <br><br>";
+                    }
+                ?>
+            </div>
         </div>
         <h2>Add a Review</h2>
         <form method="POST" action="reviews.php" id="reviewForm">

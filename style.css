@@ -133,7 +133,7 @@ button.material-icons {
 }
 
 .dropdown {
-    float: right;
+    /* float: right; */
     position: relative;
     display: inline-block;
 
@@ -404,9 +404,6 @@ button.material-icons {
     border: none;
 }
 
-#username, #password {
-}
-
 #submitBtn {
     border-radius: 5px;
     border: 2px solid rgb(176, 109, 179);
@@ -575,6 +572,18 @@ footer {
 #submit-review {
     display: block;
     margin-top: 10px;
+}
+
+#review-comment {
+    border: 1px solid #000;
+    border-radius: 5px;
+    /* box-shadow: 4px 4px 5px #323232; */
+    background:  white;
+    font-size: calc(15px + 0.3vw);
+}
+
+#hidden-reviews {
+    display: none;
 }
 
 /* ----------------- reviews.php ---------------------- */

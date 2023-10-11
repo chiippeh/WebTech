@@ -76,6 +76,7 @@
                 // ob_end_flush();
                 $result = mysqli_fetch_array($result);
                 $_SESSION['student_id'] = $result['student_id'];
+                $_SESSION['student_num'] = $result['student_num'];
                 header("Location: index.php");
                 exit();
             } else {
