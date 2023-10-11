@@ -1,3 +1,17 @@
+<?php
+    if($_SERVER["REQUEST_METHOD"] == "POST") { //if the submit button has been pressed
+        require_once('validate.php');
+        require_once('conn.php');
+
+        $review_stuff = $_POST["reviewText"];
+        
+        $query = "INSERT INTO reviews (`student_id`, `review_stuff`)
+                  VALUES ('1', '$review_stuff');";
+
+        $result = mysqli_query($conn, $query);
+    }
+?>
+
 <!--Created in collaboration with:-->
 <!--Mila-jo Davies (g21d6937), Wynne Edwards (g21e2079), Manusizwe Jourdan (g21j5408)-->
 <!DOCTYPE html>
@@ -10,6 +24,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Condensed">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="js/script.js" defer></script>
+    <script src="js/reviews.js" defer></script>
 </head>
 <body>
     <header id="header">
@@ -51,8 +66,19 @@
     </nav>
 
     <main class="center">
-        
-    </main>
+        <h1>Reviews</h1>
+        <div class="bubble" id="reviews">
+            <!-- Reviews will be displayed here dynamically -->
+        </div>
+        <h2>Add a Review</h2>
+        <form method="POST" action="reviews.php" id="reviewForm">
+            <input type="text" id="userName" placeholder="Your Name" required>
+            <input type="number" id="rating" placeholder="Rating (1-5)" min="1" max="5" required>
+            <textarea name="reviewText" id="reviewText" placeholder="Write your review" required></textarea>
+            <button id="submit-review" type="submit">Submit Review</button>
+        </form>
+        <script src="script.js"></script>
+        </main>
 
     <footer>
         <div id="top-footer">
