@@ -87,54 +87,6 @@
                 <br>
                 <p>Click <a href="./fees.php">here</a> for more details</p> 
             </div><br>
-            <div class="dashboard"> 
-                <p>Parking lot bookings for 2028 is now available by clicking the link below or by clicking on "My Bookings".</p>
-                <br>
-                <p>Click <a href="./parkingForm.php">here</a> for more details</p> 
-            </div><br>
-            <div class="dashboard"> 
-                <p>Parking lot bookings for 2028 is now available by clicking the link below or by clicking on "My Bookings".</p>
-                <br>
-                <p>Click <a href="./parkingForm.php">here</a> for more details</p> 
-            </div><br>
-            <div class="dashboard"> 
-                <p>Parking lot bookings for 2028 is now available by clicking the link below or by clicking on "My Bookings".</p>
-                <br>
-                <p>Click <a href="./parkingForm.php">here</a> for more details</p> 
-            </div><br>
-            <div class="dashboard"> 
-                <p>Parking lot bookings for 2028 is now available by clicking the link below or by clicking on "My Bookings".</p>
-                <br>
-                <p>Click <a href="./parkingForm.php">here</a> for more details</p> 
-            </div><br>
-            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p> -->
         </div>
     </main>
     
