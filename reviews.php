@@ -84,11 +84,12 @@
             <h2 class='center'>Reviews:</h2><br>
             <?php
                 while($row = mysqli_fetch_array($user_reviews)) {
-                    echo "<div id=\"review-comment\"
-                        
-                        {$row['date']} <br>";
-                    echo "{$row['student_fname']}   {$row['student_lname']}   {$row['rating']} <br>";
-                    echo "{$row['review_stuff']} <br><br>";
+                    echo "<div id=\"review-comment\">
+                                <strong>{$row['student_fname']}   {$row['student_lname']}   {$row['rating']} stars </strong> 
+                                {$row['date']} <br>
+                                {$row['review_stuff']} 
+                            </div>
+                            <br><br>";
                 }
             ?>
         </div>

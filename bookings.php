@@ -18,7 +18,7 @@
 <body>
     <header id="header">
         <h3 id="header-container">
-            Logged into LOSS as YoMamma
+            Logged into LOSS as <?php echo $student_num ?>
         </h3>
     </header>
     <nav>
