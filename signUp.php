@@ -100,7 +100,7 @@
                       VALUES ('$username', '$fname', '$lname', '$email', '$encryptedPassword');";
                       
             $result = mysqli_query($conn, $query);
-            echo "<div id=\"success-popup\" clas=\"center\">
+            echo "<div id=\"success-popup\" class=\"center\">
                     <br><br><br>
                     <strong>
                         You have successfully been signed up!

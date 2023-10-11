@@ -80,11 +80,13 @@
     </nav>
 
     <main class="center">
-        <h1>Reviews</h1>
         <div class="bubble" id="reviews">
+            <h2 class='center'>Reviews:</h2><br>
             <?php
                 while($row = mysqli_fetch_array($user_reviews)) {
-                    echo "{$row['date']} <br>";
+                    echo "<div id=\"review-comment\"
+                        
+                        {$row['date']} <br>";
                     echo "{$row['student_fname']}   {$row['student_lname']}   {$row['rating']} <br>";
                     echo "{$row['review_stuff']} <br><br>";
                 }
@@ -92,8 +94,7 @@
         </div>
         <h2>Add a Review</h2>
         <form method="POST" action="reviews.php" id="reviewForm">
-            <input type="text" id="userName" placeholder="Your Name" required>
-            <input type="number" id="rating" name="rating" placeholder="Rating (1-5)" min="1" max="5" required>
+            <input type="number" id="rating" name="rating" placeholder="Rating (1-5)" min="1" max="5" required><br>
             <textarea name="reviewText" id="reviewText" placeholder="Write your review" required></textarea>
             <button id="submit-review" type="submit">Submit Review</button>
         </form>
