@@ -27,7 +27,7 @@
     </header>
     <nav>
         <div class="nav-elements-container">
-            <a >
+            <a id="no-hover">
                <button id="back-btn" class="material-icons">arrow_back </button>
             </a>
             <a class="current-nav" phref="./index.php">

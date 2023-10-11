@@ -1,16 +1,28 @@
 <?php
 
     require_once("BackendFiles/secure.php");
+    require_once('conn.php');
+
+    $query = "SELECT reviews.date, reviews.review_stuff, reviews.rating, students.student_fname, students.student_lname
+              FROM reviews
+              JOIN students
+              WHERE reviews.student_id = students.student_id";
+
+    $user_reviews = mysqli_query($conn, $query);
+
     if($_SERVER["REQUEST_METHOD"] == "POST") { //if the submit button has been pressed
         require_once('validate.php');
-        require_once('conn.php');
+        
 
         $review_stuff = $_POST["reviewText"];
         $student_id = $_SESSION['student_id'];
-        $query = "INSERT INTO reviews (`student_id`, `review_stuff`)
-                  VALUES ('$student_id', '$review_stuff');";
+        $rating = $_POST['rating'];
+        $currentDate = date("Y-m-d");
+        $query = "INSERT INTO reviews (`student_id`, `review_stuff`, `rating`, `date`)
+                  VALUES ('$student_id', '$review_stuff', '$rating', '$currentDate');";
 
         $result = mysqli_query($conn, $query);
+
     }
 ?>
 
@@ -36,7 +48,7 @@
     </header>
     <nav>
         <div class="nav-elements-container">
-            <a >
+            <a id="no-hover">
                <button id="back-btn" class="material-icons">arrow_back </button>
             </a>
             <a href="./index.php">
@@ -70,12 +82,18 @@
     <main class="center">
         <h1>Reviews</h1>
         <div class="bubble" id="reviews">
-            <!-- Reviews will be displayed here dynamically -->
+            <?php
+                while($row = mysqli_fetch_array($user_reviews)) {
+                    echo "{$row['date']} <br>";
+                    echo "{$row['student_fname']}   {$row['student_lname']}   {$row['rating']} <br>";
+                    echo "{$row['review_stuff']} <br><br>";
+                }
+            ?>
         </div>
         <h2>Add a Review</h2>
         <form method="POST" action="reviews.php" id="reviewForm">
             <input type="text" id="userName" placeholder="Your Name" required>
-            <input type="number" id="rating" placeholder="Rating (1-5)" min="1" max="5" required>
+            <input type="number" id="rating" name="rating" placeholder="Rating (1-5)" min="1" max="5" required>
             <textarea name="reviewText" id="reviewText" placeholder="Write your review" required></textarea>
             <button id="submit-review" type="submit">Submit Review</button>
         </form>
