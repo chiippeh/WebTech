@@ -175,6 +175,10 @@ button.material-icons {
     margin-left:1%;
 }
 
+#nav-home-logo:hover {
+    cursor: pointer;
+}
+
 /*---------------------------------------------------------------------------------------------------------------------------------------------*/
 
 
@@ -427,9 +431,9 @@ button.material-icons {
     cursor: pointer;
 }
 
-#signup-forgot-container-home {
+/* #signup-forgot-container-home {
 
-}
+} */
 
 #signup-forgot-container {
     /* margin: auto; */

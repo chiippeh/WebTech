@@ -23,6 +23,7 @@
         </h3>
     </header>
     <nav>
+        <img id="nav-home-logo" src="./images/hamrat_png_logo.png"></img>
         <div class="nav-elements-container">
             <a id="no-hover">
                <button id="back-btn" class="material-icons">arrow_back </button>

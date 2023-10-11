@@ -57,3 +57,10 @@ const back = document.getElementById("back-btn");
 back.addEventListener('click', () => {
   window.history.back();
 })
+
+//home button
+const home = document.getElementById('nav-home-logo');
+
+home.addEventListener('click', () => {
+  window.location.href = './home.php';
+})
