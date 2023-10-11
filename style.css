@@ -245,21 +245,23 @@ button.material-icons {
 
     #left-btn {
         /* float: left; */
-        margin: 5% 0 0 19%;
+        margin: 0 0 0 19%;
         padding: 1%;
         border-radius: 50px;
+        position: relative;
+        top: 43%;
     }
 
     #right-btn {
         /* float: right; */
-        margin: 5% 0 0 0;
+        /* margin: 5% 0 0 0; */
         padding: 1%;
         border-radius: 50px;
+        position: relative;
+        top: 43%;
     }
 
     img {
-        
-        
         width: 80%;
         height: 80%;
     }
@@ -414,6 +416,10 @@ button.material-icons {
 
 #submitBtn:hover {
     cursor: pointer;
+}
+
+#signup-forgot-container-home {
+
 }
 
 #signup-forgot-container {

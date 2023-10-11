@@ -119,7 +119,7 @@
             <br><br> -->
             <form id="login" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
                 <label for="username">Username</label><br>
-                <input class="focus-input" type="text" id="username" name="username" placeholder="Enter your student number" value="<?php echo $username;?>">
+                <input class="focus-input" type="text" id="username" name="username" placeholder=" Enter your student number" value="<?php echo $username;?>">
                 <br><span id="err"><?php echo $usernameErr ?></span>
                 <br><br>
                 <label for="password">Password</label><br>
@@ -149,7 +149,7 @@
             </form>
             <br><br>
             <hr><br>
-            <div id="signup-forgot-container">
+            <div id="signup-forgot-container-home">
                 <div id="signup">
                     New here? &nbsp <a href="./signUp.php" id="apply"><b>Apply!</b></a>
                 </div>
