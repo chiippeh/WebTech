@@ -48,6 +48,7 @@
         </h3>
     </header>
     <nav>
+        <img id="nav-home-logo" src="./images/hamrat_png_logo.png"></img>
         <div class="nav-elements-container">
             <a id="no-hover">
                <button id="back-btn" class="material-icons">arrow_back </button>
@@ -82,7 +83,7 @@
 
     <main class="center">
         <div class="bubble" id="reviews">
-            <p class="material-icons" >radio_button_checked</p><h2 class='center'>Reviews:</h2><br>
+            <h2 style="display:inline-block;">Reviews</h2> &nbsp <a class="material-icons" id="show-reviews" style="display:inline-block;">expand_more</a><br><br>
             <div id="hidden-reviews">
                 <?php
                     while($row = mysqli_fetch_array($user_reviews)) {
@@ -110,7 +111,7 @@
         <div id="top-footer">
             <p class="center">HAMRAT UNIVERSITY<br>Where Leaders Yearn</p> 
             
-        </div>
+        </div><br>
         <div id="bottom-footer">
             <p class="center">&copy 2023 - loss Inc. <br>
                 <a href="mailto:g21j5408@campus.ru.ac.za?cc=g21d6937@campus.ru.ac.za&bcc=g21e2079@campus.ru.ac.za&subject=Feedback for LOSS&body=Add what you want we dont care really">
