@@ -1,5 +1,6 @@
 <?php
     require_once("BackendFiles/secure.php");
+
 ?>
 
 <!--Created in collaboration with:-->
@@ -26,19 +27,19 @@
     </header>
     <nav>
         <div class="nav-elements-container">
-            <a class="current-nav" phref="./index.html">
+            <a class="current-nav" phref="./index.php">
                 <span class="material-icons">dashboard</span>
                 <p class="nav-btn-text">My Dashboard</p>
             </a>
-            <a href="./about.html">
+            <a href="./about.php">
                 <span class="material-icons">psychology_alt</span>
                 <p class="nav-btn-text">About Us</p>
             </a>
-            <a href="./curriculum.html"> 
+            <a href="./curriculum.php"> 
                 <span class="material-icons">library_books</span>
                 <p class="nav-btn-text">Curriculum</p>
             </a>
-            <a href="./bookings.html">
+            <a href="./bookings.php">
                 <span class="material-icons">list_alt</span>
                 <p class="nav-btn-text">My Bookings</p>
             </a>
@@ -60,47 +61,47 @@
             <div class="dashboard"> 
                 <p>Online Depression Bench bookings for 2028 is now available by clicking the link below or by clicking on "My Bookings".</p>
                 <br>
-                <p>Click <a href="./benchForm.html">here</a> for more details</p> 
+                <p>Click <a href="./benchForm.php">here</a> for more details</p> 
             </div><br>
             <div class="dashboard"> 
                 <p>Meals need to be booked daily. To book your Meals please click the link below or click on "My Bookings".</p>
                 <br>
-                <p>Click <a href="./mealForm.html">here</a> for more details</p> 
+                <p>Click <a href="./mealForm.php">here</a> for more details</p> 
             </div><br>
             <div class="dashboard"> 
                 <p>Parking lot bookings for 2028 is now available by clicking the link below or by clicking on "My Bookings".</p>
                 <br>
-                <p>Click <a href="./parkingForm.html">here</a> for more details</p> 
+                <p>Click <a href="./parkingForm.php">here</a> for more details</p> 
             </div><br>
             <div class="dashboard"> 
                 <p>Honours applications are now open for 2028. If you wish to sell your soul to the university click the link below or go to "My Bookings".</p>
                 <br>
-                <p>Click <a href="./honoursForm.html">here</a> if you're lazy</p> 
+                <p>Click <a href="./honoursForm.php">here</a> if you're lazy</p> 
             </div><br>
             <div class="dashboard"> 
                 <p>You have <strong style="color: red">UNPAID</strong> tuition fees</p>
                 <br>
-                <p>Click <a href="./fees.html">here</a> for more details</p> 
+                <p>Click <a href="./fees.php">here</a> for more details</p> 
             </div><br>
             <div class="dashboard"> 
                 <p>Parking lot bookings for 2028 is now available by clicking the link below or by clicking on "My Bookings".</p>
                 <br>
-                <p>Click <a href="./parkingForm.html">here</a> for more details</p> 
+                <p>Click <a href="./parkingForm.php">here</a> for more details</p> 
             </div><br>
             <div class="dashboard"> 
                 <p>Parking lot bookings for 2028 is now available by clicking the link below or by clicking on "My Bookings".</p>
                 <br>
-                <p>Click <a href="./parkingForm.html">here</a> for more details</p> 
+                <p>Click <a href="./parkingForm.php">here</a> for more details</p> 
             </div><br>
             <div class="dashboard"> 
                 <p>Parking lot bookings for 2028 is now available by clicking the link below or by clicking on "My Bookings".</p>
                 <br>
-                <p>Click <a href="./parkingForm.html">here</a> for more details</p> 
+                <p>Click <a href="./parkingForm.php">here</a> for more details</p> 
             </div><br>
             <div class="dashboard"> 
                 <p>Parking lot bookings for 2028 is now available by clicking the link below or by clicking on "My Bookings".</p>
                 <br>
-                <p>Click <a href="./parkingForm.html">here</a> for more details</p> 
+                <p>Click <a href="./parkingForm.php">here</a> for more details</p> 
             </div><br>
             <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius voluptates quae nisi ducimus neque possimus dolore magnam quo libero labore culpa, assumenda hic quod debitis harum sequi ut natus!</p>

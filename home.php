@@ -4,7 +4,8 @@
     
     $usernameErr = $passwordErr = "";
     $username = $password = "";
-    $usernameRequiredErr =  $passwordRequiredErr = "";
+    // $usernameRequiredErr =  $passwordRequiredErr = "";
+    $usernameErr = $passwordErr = "";
     $usernameValid = $passwordValid = false;
 
 
@@ -22,7 +23,7 @@
 
         if (empty($_POST["username"])) {
             // echo "<script>console.log(you have entered nothing);</script>";
-            $usernameRequiredErr = "* Username is required";
+            $usernameErr = "* Username is required";
             
         } else {
             // echo "you have entered something";
@@ -35,15 +36,15 @@
                 $usernameValid = true;
 
             } else {
-                // $usernameErr = "* ";
-                foreach ($errors as $error) {
-                    $usernameErr .= $error;
-                }
+                $usernameErr = "* Username is invalid ";
+                // foreach ($errors as $error) {
+                //     $usernameErr .= $error;
+                // }
             }
         }
 
         if (empty($_POST["password"])) {
-            $passwordRequiredErr = "* Password is required";
+            $passwordErr = "* Password is required";
         } else {
             $password = sanitiseInput($_POST["password"]);
             
@@ -53,10 +54,10 @@
                 // echo "Password is valid.";
                 $passwordValid = true;
             } else {
-                $passwordErr = "* ";
-                foreach ($errors as $error) {
-                    $passwordErr .= $error;
-                }
+                $passwordErr = "* Password is invalid";
+                // foreach ($errors as $error) {
+                //     $passwordErr .= $error;
+                // }
             }
         }
 
@@ -102,18 +103,23 @@
 <body>
     <header>
     </header>
-    <main>
-        <div id="home-container" class="main-container center">
+    <main id="home-signup-main">
+        <div class="center" style="text-align: center;">
+            <!-- <img src="images/hamrat_png_logo.png" alt=""> -->
+            <img id="logo" src="images/hamrat_png_logo.png" alt="">
+        </div>
+
+        <div class="home-container main-container center">
             <!-- <div id="welcome">Welcome to LOSS</div>
             <br><br> -->
             <form id="login" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
                 <label for="username">Username</label><br>
-                <input class="focus-input" type="text" id="username" name="username" placeholder="Enter your studentnumber" value="<?php echo $username;?>">
-                <span id="required-err"><?php echo $usernameRequiredErr ?></span>
+                <input class="focus-input" type="text" id="username" name="username" placeholder="Enter your student number" value="<?php echo $username;?>">
+                <br><span id="err"><?php echo $usernameErr ?></span>
                 <br><br>
                 <label for="password">Password</label><br>
                 <input class="focus-input" type="password" id="password" name="password" value="<?php echo $password;?>">
-                <span id="required-err"><?php echo $passwordRequiredErr ?></span>
+                <br><span id="err"><?php echo $passwordErr ?></span>
                 <div class="popup" id="popup">
                     <h4>Input Requirements</h2><br>
                     <span class="close" id="close-popup">&times;</span>
@@ -132,11 +138,12 @@
                             <br>"; 
                     ?>
                 </div>
-                <br><br>
+                <br><br><br>
 
                 <input type="submit" name="submit" id="submitBtn" value="Sign In">
             </form>
             <br><br>
+            <hr><br>
             <div id="signup-forgot-container">
                 <div id="signup">
                     New here? <a href="./signUp.php" >Apply!</a>
