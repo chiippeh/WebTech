@@ -28,6 +28,7 @@ while ($row = $result->fetch_assoc()) {
     <div class="profile-container">
         <div class="profile-image">
             <?php
+                echo $student_profile_image;
                 echo "<p><img src=\"/images/studentImages/\"" . $student_profile_image . "></p>";
             ?>
         </div>
