@@ -74,6 +74,8 @@
             if (mysqli_num_rows($result) == 1) {
                 $_SESSION['access'] = "granted";
                 // ob_end_flush();
+                $result = mysqli_fetch_array($result);
+                $_SESSION['student_id'] = $result['student_id'];
                 header("Location: index.php");
                 exit();
             } else {
