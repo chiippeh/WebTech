@@ -1,12 +1,14 @@
 <?php
+    require_once("BackendFiles/secure.php");
+
     if($_SERVER["REQUEST_METHOD"] == "POST") { //if the submit button has been pressed
         require_once('validate.php');
         require_once('conn.php');
 
         $review_stuff = $_POST["reviewText"];
-        
+        $student_id = $_SESSION['student_id'];
         $query = "INSERT INTO reviews (`student_id`, `review_stuff`)
-                  VALUES ('1', '$review_stuff');";
+                  VALUES ('$student_id', '$review_stuff');";
 
         $result = mysqli_query($conn, $query);
     }
