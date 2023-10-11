@@ -1,5 +1,6 @@
 <?php
     require_once("BackendFiles/secure.php");
+    $student_num = $_SESSION['student_num'];
 
 ?>
 <!--Created in collaboration with:-->
