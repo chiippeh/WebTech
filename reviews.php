@@ -1,4 +1,8 @@
 <?php
+
+    require_once("BackendFiles/secure.php");
+
+
     if($_SERVER["REQUEST_METHOD"] == "POST") { //if the submit button has been pressed
         require_once('validate.php');
         require_once('conn.php');

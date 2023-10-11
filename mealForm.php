@@ -1,3 +1,7 @@
+<?php
+    require_once("BackendFiles/secure.php");
+
+?>
 <!--Created in collaboration with:-->
 <!--Mila-jo Davies (g21d6937), Wynne Edwards (g21e2079), Manusizwe Jourdan (g21j5408)-->
 <!DOCTYPE html>
