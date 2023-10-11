@@ -82,7 +82,7 @@
                 // echo $password;
                 if ($password == $confirmPassword) {
                     $confirmPasswordValid = true;
-                    echo $confirmPassword;
+                    // echo $confirmPassword;
                 } else {
                     // echo "you idiot the password are not the same";
                 }
@@ -100,12 +100,15 @@
                       VALUES ('$username', '$fname', '$lname', '$email', '$encryptedPassword');";
                       
             $result = mysqli_query($conn, $query);
-            echo "<div id=\"success-popup\">
-                    You have successfully been signed up!
-                    <br>
-                    Your username is: {$username}
-                    <br><br>
-                    <a href=\"home.php?username=" . $username .     "\"><button>Login</button></a>
+            echo "<div id=\"success-popup\" clas=\"center\">
+                    <br><br><br>
+                    <strong>
+                        You have successfully been signed up!
+                        <br>
+                        Your username is: {$username}
+                        <br><br>
+                        <a href=\"home.php?username=" . $username ."\"><button style=\"width:20%; height:2em;\">Login</button></a>
+                    </strong>
                   </div>";
         }
     }
@@ -130,8 +133,9 @@
     </header>
     <main id="home-signup-main">
         <div class="center" style="text-align: center;">
-            <!-- <img src="images/hamrat_png_logo.png" alt=""> -->
-            <img id="logo" src="images/hamrat_png_logo.png" alt="">
+            <a href="home.php">
+                <img id="logo" src="images/hamrat_png_logo.png" alt="">
+            </a>
         </div>
 
         <div class="home-container main-container center">

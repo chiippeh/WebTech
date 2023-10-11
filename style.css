@@ -442,7 +442,7 @@ nav a * {
     border: 1px solid #ccc;
     background: #f9f9f9;
     padding: 5px;
-    width: 50%;
+    width: 37%;
     font-size: calc(9px + 0.3vw);
     border-radius: 5px;
 }
@@ -470,19 +470,26 @@ ul li {
 
 #success-popup {
     position: absolute;
-    top: 10vh;
-    /* left: 20%; */
-    left: 20vw;
-    width: 60%;
-    height: 75%;
+    top: 20%;
+    left: 35%;
+    width: 30%;
+    height: 20em;
     z-index: 3;
-    border: 1px solid #ccc;
+    border: 3px solid #a136af;
     background: #f9f9f9;
     border-radius: 25px;
     font-size: calc(20px + 0.3vw);
     text-align: center;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
+#apply {
+    text-decoration: none;
+}
+
+#apply:hover {
+    color: rgb(25, 182, 25);
+}
 /* ----------------- home.php ---------------------- */
 
 

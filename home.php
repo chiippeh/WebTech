@@ -106,7 +106,9 @@
     <main id="home-signup-main">
         <div class="center" style="text-align: center;">
             <!-- <img src="images/hamrat_png_logo.png" alt=""> -->
-            <img id="logo" src="images/hamrat_png_logo.png" alt="">
+            <a href="home.php">
+                <img id="logo" src="images/hamrat_png_logo.png" alt="">
+            </a>
         </div>
 
         <div class="home-container main-container center">
@@ -146,7 +148,7 @@
             <hr><br>
             <div id="signup-forgot-container">
                 <div id="signup">
-                    New here? <a href="./signUp.php" >Apply!</a>
+                    New here? &nbsp <a href="./signUp.php" id="apply"><b>Apply!</b></a>
                 </div>
                 <div id="forgot">
                     <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" >Forgot Password? </a>
