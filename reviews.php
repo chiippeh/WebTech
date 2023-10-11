@@ -2,6 +2,7 @@
 
     require_once("BackendFiles/secure.php");
     require_once('conn.php');
+    $student_num = $_SESSION['student_num'];
 
     $query = "SELECT reviews.date, reviews.review_stuff, reviews.rating, students.student_fname, students.student_lname
               FROM reviews
@@ -16,7 +17,6 @@
 
         $review_stuff = $_POST["reviewText"];
         $student_id = $_SESSION['student_id'];
-        $student_num = $_SESSION['student_num'];
         $rating = $_POST['rating'];
         $currentDate = date("Y-m-d");
         $query = "INSERT INTO reviews (`student_id`, `review_stuff`, `rating`, `date`)
