@@ -5,12 +5,10 @@ $student_id_current = $_SESSION['student_id'];
 $query = "SELECT student_fname, student_email, student_image FROM students
           WHERE student_id = '" . $student_id_current . "';";
 $result = mysqli_query($conn, $query);
-
-while ($row = $result->fetch_assoc()) {
-    $student_id = $row["student_fname"];
-    $student_email = $row["student_email"];
-    $student_profile_image = $row["student_image"];
-}
+$row = mysqli_fetch_array($result);
+$student_id = $row["student_fname"];
+$student_email = $row["student_email"];
+$student_profile_image = $row["student_image"];
 ?>
 
 <!DOCTYPE html>
@@ -28,8 +26,7 @@ while ($row = $result->fetch_assoc()) {
     <div class="profile-container">
         <div class="profile-image">
             <?php
-                echo $student_profile_image;
-                echo "<p><img src=\"/images/studentImages/\"" . $student_profile_image . "></p>";
+                echo "<img src=\"images/studentImages/" . $student_profile_image . "\">";
             ?>
         </div>
         <div class="profile-name">

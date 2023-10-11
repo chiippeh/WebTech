@@ -254,21 +254,23 @@ button.material-icons {
 
     #left-btn {
         /* float: left; */
-        margin: 5% 0 0 19%;
+        margin: 0 0 0 19%;
         padding: 1%;
         border-radius: 50px;
+        position: relative;
+        top: 43%;
     }
 
     #right-btn {
         /* float: right; */
-        margin: 5% 0 0 0;
+        /* margin: 5% 0 0 0; */
         padding: 1%;
         border-radius: 50px;
+        position: relative;
+        top: 43%;
     }
 
     img {
-        
-        
         width: 80%;
         height: 80%;
     }
@@ -372,8 +374,8 @@ button.material-icons {
 }
 
 #logo {
-     height: 13em;
-    width: 12em;
+     height: 11em;
+    width: 10em;
     /* margin: 0 0 0 17vw; */
 }
 
@@ -384,7 +386,7 @@ button.material-icons {
 .home-container {
     background-color: rgb(213, 213, 213);
     border-radius: 30px;
-    height: 63%;
+    height: 69%;
     padding: 2% 2% 2% 5%;
 }
 
@@ -418,13 +420,26 @@ button.material-icons {
     border: 2px solid rgb(176, 109, 179);
     width: 20%;
     margin-left: 10%;
+    display: inline-block;
+}
+
+#submitBtn:hover {
+    cursor: pointer;
+}
+
+#signup-forgot-container-home {
+
 }
 
 #signup-forgot-container {
     /* margin: auto; */
-    width: 100%;
-    position: relative;
-    bottom:1em;
+    /* width: 100%; */
+    /* right: 0; */
+    /* position: relative; */
+    display: inline-block;
+    margin-left: 25%;
+
+    /* bottom:1em; */
 }
 
 #signup {
