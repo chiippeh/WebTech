@@ -49,3 +49,11 @@ if (cookiesEnabled) {
 browserInfo.innerHTML = `Browser Language: ${lanugage}&nbsp&nbsp&nbsp-&nbsp&nbsp&nbsp Cookies? ${cookieSymbol}`;
 browserInfo.classList.add("center");
 bottomFooter.appendChild(browserInfo);
+
+
+//back button
+const back = document.getElementById("back-btn");
+
+back.addEventListener('click', () => {
+  window.history.back();
+})

@@ -111,6 +111,10 @@ nav a * {
     display: inline-block;
 }
 
+button.material-icons {
+    color: white;
+    background-color:#333;
+}
 
 .current-nav {
     background-color: #767676;

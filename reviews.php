@@ -19,6 +19,9 @@
     </header>
     <nav>
         <div class="nav-elements-container">
+            <a >
+               <button id="back-btn" class="material-icons">arrow_back </button>
+            </a>
             <a href="./index.php">
                 <span class="material-icons">dashboard</span>
                 <p class="nav-btn-text">My Dashboard</p>

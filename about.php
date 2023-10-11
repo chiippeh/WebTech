@@ -22,9 +22,9 @@
     </header>
     <nav>
         <div class="nav-elements-container">
-            <a id="back-btn" >
-                <span class="material-icons">arrow_back</span>
-    
+            <a >
+               <button id="back-btn" class="material-icons">arrow_back </button>
+
             </a>
             <a href="./index.php">
                 <span class="material-icons">dashboard</span>
