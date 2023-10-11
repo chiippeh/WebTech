@@ -102,7 +102,7 @@
     <script src="js/home.js" defer></script>
 </head>
 
-<body>
+<body class = "no-shrink">
     <header>
     </header>
     <main id="home-signup-main">
