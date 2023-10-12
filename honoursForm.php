@@ -46,15 +46,15 @@
             <span class="material-icons">list_alt</span>
             <p class="nav-btn-text">My Bookings</p>
         </a>
-        <a onclick="myFunction()" class="dropdown dropbtn">
-            <span class="material-icons">tune</span>
-            <p class="nav-btn-text">My Utilities</p>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="./reviews.php">Reviews</a>
-                <a href="https://x.com/catshouldnt/status/1706917149984657713?s=20">Cat</a>
-                <a href="https://www.youtube.com/watch?v=L1ung0wil9Y&ab_channel=MITOpenCourseWare">Secret</a>
-            </div>
+        <a id="utilities" class="dropdown dropbtn">
+            <span id="util-icon" class="material-icons">tune</span>
+            <p id="my-util" class="nav-btn-text">My Utilities</p>
         </a>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="./reviews.php">Reviews</a>
+            <a href="https://x.com/catshouldnt/status/1706917149984657713?s=20">Cat</a>
+            <a href="https://www.youtube.com/watch?v=L1ung0wil9Y&ab_channel=MITOpenCourseWare">Secret</a>
+        </div>
         <!-- <div class="nav-elements-container">
         </div> -->
     </nav>

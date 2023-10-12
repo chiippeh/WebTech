@@ -21,9 +21,22 @@ function scrollFunction() {
 
 // I couldn't implement the Dropdown without using javascript :(
 
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-  }
+// function myFunction() {
+//     document.getElementById("myDropdown").classList.toggle("show");
+// }
+
+// document.getElementById("utilities").addEventListener('click', function() {
+// });
+
+document.getElementById("utilities").addEventListener("click", function(event) {
+  document.getElementById("myDropdown").classList.toggle("show");
+  event.preventDefault(); // Prevents the default behavior of the anchor tag
+});
+
+// document.getElementById("my-icon").addEventListener("click", function(event) {
+//   document.getElementById("myDropdown").classList.toggle("show");
+//   event.preventDefault(); // Prevents the default behavior of the anchor tag
+// });
   
 window.onclick = function(event) {
 if (!event.target.matches('.dropbtn')) {

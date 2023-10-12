@@ -21,7 +21,8 @@ $student_profile_image = $row["student_image"];
 </head>
 
 <body class="no-shrink">
-    <header>
+    <header style="display: flex; justify-content: center">
+        <img src="./images/wip.jpg" alt="" width="50%" height="300px">
     </header>
     <div class="profile-container">
         <div class="profile-image">
