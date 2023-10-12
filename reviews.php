@@ -24,6 +24,16 @@
 
         $result = mysqli_query($conn, $query);
 
+        echo "<div id=\"review-popup\" class=\"center\">
+                    <br><br><br>
+                    <strong>
+                        Your review has been submitted succesfully!
+                        <br><br>
+                        <a href=\"reviews.php\"><button style=\"width:10%; height:2em;\">OK</button></a>
+                    </strong>
+                  </div>";
+        //header("Location: http://cs3-dev.ict.ru.ac.za/Practicals/g21d6937/WebTech/reviews.php");
+
     }
 ?>
 

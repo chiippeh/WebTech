@@ -612,6 +612,22 @@ footer {
     cursor: pointer;
 }
 
+#review-popup {
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    width: 30%;
+    height: 30%;
+    z-index: 3;
+    border: 3px solid #a136af;
+    background: #f9f9f9;
+    border-radius: 25px;
+    font-size: calc(20px + 0.3vw);
+    text-align: center;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    
+}
+
 /* ----------------- reviews.php ---------------------- */
 
 /*---------------------------------------------------------------------------------------------------------------------------------------------*/
