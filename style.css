@@ -87,25 +87,24 @@ nav {
     background-color: #333;
     z-index: 1000;
     color: #ffff;
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    
 }
 
-.nav-elements-container {
-    margin: auto;
+/* .nav-elements-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: red;
     width: 65vw;
-    height: 100%;
-    display: inline-block;
-    margin-left: 14%;
-}
-
-
+} */
 
 nav a {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
-    height: 100%;
-    width: 16%;
-    text-align: center;
-    padding: 1.5vh 0 0 0;
     color: #ffff;
 }
 
@@ -136,8 +135,8 @@ button.material-icons {
 
 .dropdown {
     /* float: right; */
-    position: relative;
-    display: inline-block;
+    /* position: relative;
+    display: inline-block; */
 
 }
 
@@ -147,7 +146,8 @@ button.material-icons {
     background-color: #3b3b3b;
     width: 12.3%;
     overflow: auto;
-    right: 16.5%;
+    right: 20%;
+    top: 100%;
     z-index: 1;
 }
 
@@ -172,7 +172,9 @@ button.material-icons {
 #nav-home-logo {
     width: 2%;
     height:80%;
-    margin-left:1%;
+    /* margin-left:1%; */
+    position: absolute;
+    left: 0;
 }
 
 #nav-home-logo:hover {
@@ -634,6 +636,8 @@ footer {
         width: 15%;
         height: 100%;
         position: fixed;
+        flex-direction: column;
+        justify-content: flex-start;
     }
 
     .nav-elements-container {
@@ -671,6 +675,10 @@ footer {
 
     .center {
         width: 80%;
+    }
+
+    #nav-home-logo {
+        display: none;
     }
   }
 
