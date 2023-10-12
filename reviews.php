@@ -108,9 +108,12 @@
                 ?>
             </div>
         </div>
-        <h2>Add a Review</h2>
+        <br>
+        <h2>Add a Review:</h2><br>
         <form method="POST" action="reviews.php" id="reviewForm">
-            <input type="number" id="rating" name="rating" placeholder="Rating (1-5)" min="1" max="5" required><br>
+            <label for="rating" style="font-size:85%;">1-5 rating:</label><br>
+            <input type="number" id="rating" name="rating" placeholder="Rating (1-5)" min="1" max="5" required><br><br>
+            <label for="reviewText" style="font-size:85%;">Your Review:</label><br>
             <textarea name="reviewText" id="reviewText" placeholder="Write your review" required></textarea>
             <button id="submit-review" type="submit">Submit Review</button>
         </form>
