@@ -4,7 +4,7 @@
     require_once('conn.php');
     $student_num = $_SESSION['student_num'];
 
-    $query = "SELECT reviews.date, reviews.review_stuff, reviews.rating, students.student_fname, students.student_lname
+    $query = "SELECT reviews.review_id, reviews.date, reviews.review_stuff, reviews.rating, students.student_fname, students.student_lname
               FROM reviews
               JOIN students
               WHERE reviews.student_id = students.student_id";
@@ -101,6 +101,14 @@
                                     <strong>{$row['student_fname']}   {$row['student_lname']}  &nbsp | &nbsp {$row['rating']} stars </strong> 
                                     <div style=\"float:right;\">{$row['date']}</div> <br><br>
                                     {$row['review_stuff']} 
+                                    <div id=\"edit-delete-container\">
+                                        <a href=\"editReview.php?id=" . $row['review_id'] . "\">
+                                            <input type=\"button\" value=\"Edit\">
+                                        </a>
+                                        <a href=\"deleteReview.php?id=" . $row['review_id'] . "\">
+                                        <input type=\"button\" value=\"Delete\">
+                                        </a>
+                                    </div>
                                     <br><br>
                                 </div>
                                 <br><br>";
