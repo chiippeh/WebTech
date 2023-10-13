@@ -102,7 +102,9 @@
                                     <div style=\"float:right;\">{$row['date']}</div> <br><br>
                                     {$row['review_stuff']} 
                                     <div id=\"edit-delete-container\">
-                                        <a href=\"editReview.php?id=" . $row['review_id'] . "\">
+                                        <a href=\"editReview.php?id=" . $row['review_id'] . "&rating=" 
+                                                                      . $row['rating'] . "&text=" 
+                                                                      . $row['review_stuff'] . "\">
                                             <input type=\"button\" value=\"Edit\">
                                         </a>
                                         <a href=\"deleteReview.php?id=" . $row['review_id'] . "\">
