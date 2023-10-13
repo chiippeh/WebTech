@@ -638,6 +638,33 @@ footer {
     
 }
 
+#edit-delete-container {
+    display: flex;
+    justify-content: end;
+    gap: 0.5em;
+    padding: 0 2% 0 2%;
+}
+
+#edit-delete-container a {
+    width: 8%;
+}
+
+#edit-delete-container input {
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid rgb(176, 109, 179);
+    text-decoration: none;
+    text-align: center;
+    color: black;
+}
+
+#edit-delete-container input:hover {
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgb(176, 109, 179);
+    color: white;
+}
+
 /* ----------------- reviews.php ---------------------- */
 
 
