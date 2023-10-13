@@ -99,10 +99,20 @@ $student_num = $row["student_num"];
                 echo "Email Address: <br> <p>{$student_email}</p>";
                 ?>
             </div><br>
+            
+            <div id="profile-edit-logout"> 
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><input type="button" value="Edit Details"></a>
+                <a  href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><input type="button" value="Log Out"></a>
+            </div>
 
-            <button class="profile-password">
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Edit Details</a>
-            </button><br><br>
+            
+            <!-- <button class="button-styles" >
+                
+            </button>
+            <button  class="button-styles">
+                
+            </button> -->
+            <br><br> 
         </div >
     </main>
 
