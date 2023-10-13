@@ -617,7 +617,7 @@ footer {
     display: none;
 }
 #show-reviews:hover {
-    background-color: #95619c;
+    background-color: rgb(176, 109, 179);
     border-radius: 5px;
     cursor: pointer;
 }

@@ -2,10 +2,40 @@
     require_once("BackendFiles/secure.php");
     require_once('conn.php');
 
-    $reviewId = $_REQUEST['id'];
-    echo $reviewId;
+    if(isset($_GET['id']) && isset($_GET['rating']) && isset($_GET['text'])) {
+        $reviewId = $_REQUEST['id'];
+        $rating = $_REQUEST['rating'];
+        $reviewText = $_REQUEST['text'];
+    }
 
+    // echo $rating;
+    // echo $reviewText;
 
+    if($_SERVER["REQUEST_METHOD"] == "POST") { //if the submit button has been pressed
+        require_once('validate.php');
+        
+        $review_rating_update = $_POST['rating'];
+        $review_stuff_update = $_POST["reviewText"];
+        $review_id_update = $_POST['reviewId'];
+
+        $query = " UPDATE reviews
+                   SET review_stuff = '$review_stuff_update', rating = '$review_rating_update'
+                   WHERE review_id = '$review_id_update'";
+
+        $result = mysqli_query($conn, $query);
+
+        echo "<div id=\"review-popup\" class=\"center\">
+                    <br><br><br>
+                    <strong>
+                        Your review has been edited and updated succesfully!
+                  
+                        <br><br>
+                        <a href=\"reviews.php\"><button style=\"width:10%; height:2em;\">OK</button></a>
+                    </strong>
+                </div>";
+    }
+    
+    mysqli_close($conn);
 ?>
 
 <!--Created in collaboration with:-->
@@ -61,8 +91,17 @@
     </nav>
 
     <main class="center">
-        <div class="bubble">
-            
+        <div class="small-bubble">
+            <form method="POST" action="editReview.php">
+                <label for="rating" style="font-size:85%;">1-5 rating:</label><br>
+                <input type="number" id="rating" name="rating" min="1" max="5" value="<?php echo $rating;?>"><br><br>
+                <label for="reviewText" style="font-size:85%;">Your Review:</label><br>
+                <textarea name="reviewText" id="reviewText">
+                    <?php echo $reviewText;?>
+                </textarea>
+                <input type="hidden" name="reviewId" id="reviewId" value="<?php echo $reviewId ?>">
+                <button id="submit-review" type="submit">Submit Review</button>
+            </form>
         </div>
     </main>
 
@@ -85,4 +124,4 @@
         </div>
     </footer>
 </body>
-</html>
+</html> 
