@@ -29,9 +29,10 @@
     <nav>
         <img id="nav-home-logo" src="./images/hamrat_png_logo.png"></img>
         <a id="no-hover">
-           <button id="back-btn" class="material-icons">arrow_back </button>
+            <button id="back-btn" class="material-icons">arrow_back </button>
+
         </a>
-        <a class="current-nav" phref="./index.php">
+        <a class="current-nav" href="./index.php">
             <span class="material-icons">dashboard</span>
             <p class="nav-btn-text">My Dashboard</p>
         </a>
@@ -56,8 +57,9 @@
             <a href="https://x.com/catshouldnt/status/1706917149984657713?s=20">Cat</a>
             <a href="https://www.youtube.com/watch?v=L1ung0wil9Y&ab_channel=MITOpenCourseWare">Secret</a>
         </div>
-        <!-- <div class="nav-elements-container">
-        </div> -->
+        <a href="./profile.php"> 
+            <span id="profile-icon" class="material-icons">account_circle</span>
+        </a>
     </nav>
     
 

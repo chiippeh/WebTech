@@ -56,6 +56,10 @@
             <a href="https://x.com/catshouldnt/status/1706917149984657713?s=20">Cat</a>
             <a href="https://www.youtube.com/watch?v=L1ung0wil9Y&ab_channel=MITOpenCourseWare">Secret</a>
         </div>
+        <a href="./profile.php"> 
+            <span id="profile-icon" class="material-icons">account_circle</span>
+        </a>
+        
         <!-- <div class="nav-elements-container">
         </div> -->
     </nav>

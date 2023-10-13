@@ -117,6 +117,16 @@ button.material-icons {
     background-color:#333;
 }
 
+#profile-icon{
+    /* width: 2%;
+    height:80%; */
+    /* margin-left:1%; */
+    position: absolute;
+    right: 0;
+    font-size: calc(30px + 0.3vw);
+    color: rgb(176, 109, 179);
+}
+
 .current-nav {
     background-color: #767676;
     outline: solid 2px white;

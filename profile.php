@@ -37,7 +37,7 @@ $student_num = $row["student_num"];
     <nav>
         <img id="nav-home-logo" src="./images/hamrat_png_logo.png"></img>
         <a id="no-hover">
-           <button id="back-btn" class="material-icons">arrow_back </button>
+            <button id="back-btn" class="material-icons">arrow_back </button>
 
         </a>
         <a href="./index.php">
@@ -48,11 +48,11 @@ $student_num = $row["student_num"];
             <span class="material-icons">psychology_alt</span>
             <p class="nav-btn-text">About Us</p>
         </a>
-        <a href="./curriculum.php"> 
+        <a class="current-nav" href="./curriculum.php"> 
             <span class="material-icons">library_books</span>
             <p class="nav-btn-text">Curriculum</p>
         </a>
-        <a class="current-nav" href="./bookings.php">
+        <a href="./bookings.php">
             <span class="material-icons">list_alt</span>
             <p class="nav-btn-text">My Bookings</p>
         </a>
@@ -65,13 +65,11 @@ $student_num = $row["student_num"];
             <a href="https://x.com/catshouldnt/status/1706917149984657713?s=20">Cat</a>
             <a href="https://www.youtube.com/watch?v=L1ung0wil9Y&ab_channel=MITOpenCourseWare">Secret</a>
         </div>
-        <!-- <div class="nav-elements-container">
-        </div> -->
+        <a href="./profile.php"> 
+            <span id="profile-icon" class="material-icons">account_circle</span>
+        </a>
     </nav>
     
-    <!-- <header style="display: flex; justify-content: center">
-        <img src="./images/wip.jpg" alt="" width="50%" height="300px">
-    </header> -->
     <main class="center">
         <div  id="profile-content" class="profile-info small-bubble">
             <br>
@@ -102,7 +100,7 @@ $student_num = $row["student_num"];
             
             <div id="profile-edit-logout"> 
                 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><input type="button" value="Edit Details"></a>
-                <a  href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><input type="button" value="Log Out"></a>
+                <a  href="logOut.php"><input type="button" value="Log Out" onClick="return confirm('Are you sure you want to log out?')"></a>
             </div>
 
             

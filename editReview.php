@@ -61,7 +61,8 @@
     <nav>
         <img id="nav-home-logo" src="./images/hamrat_png_logo.png"></img>
         <a id="no-hover">
-           <button id="back-btn" class="material-icons">arrow_back </button>
+            <button id="back-btn" class="material-icons">arrow_back </button>
+
         </a>
         <a href="./index.php">
             <span class="material-icons">dashboard</span>
@@ -71,7 +72,7 @@
             <span class="material-icons">psychology_alt</span>
             <p class="nav-btn-text">About Us</p>
         </a>
-        <a href="./curriculum.php"> 
+        <a class="current-nav" href="./curriculum.php"> 
             <span class="material-icons">library_books</span>
             <p class="nav-btn-text">Curriculum</p>
         </a>
@@ -79,14 +80,17 @@
             <span class="material-icons">list_alt</span>
             <p class="nav-btn-text">My Bookings</p>
         </a>
-        <a onclick="myFunction()" class="dropdown dropbtn" >
-            <span class="material-icons">tune</span>
-            <p class="nav-btn-text" class="current-nav">My Utilities</p>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="./reviews.php">Reviews</a>
-                <a href="https://x.com/catshouldnt/status/1706917149984657713?s=20">Cat</a>
-                <a href="https://www.youtube.com/watch?v=L1ung0wil9Y&ab_channel=MITOpenCourseWare">Secret</a>
-            </div>
+        <a id="utilities" class="dropdown dropbtn">
+            <span id="util-icon" class="material-icons">tune</span>
+            <p id="my-util" class="nav-btn-text">My Utilities</p>
+        </a>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="./reviews.php">Reviews</a>
+            <a href="https://x.com/catshouldnt/status/1706917149984657713?s=20">Cat</a>
+            <a href="https://www.youtube.com/watch?v=L1ung0wil9Y&ab_channel=MITOpenCourseWare">Secret</a>
+        </div>
+        <a href="./profile.php"> 
+            <span id="profile-icon" class="material-icons">account_circle</span>
         </a>
     </nav>
 
