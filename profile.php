@@ -2,13 +2,16 @@
 require_once("conn.php");
 require_once("BackendFiles/secure.php");
 $student_id_current = $_SESSION['student_id'];
-$query = "SELECT student_fname, student_email, student_image FROM students
+$query = "SELECT student_fname, student_email, student_image, student_lname, student_num
+          FROM students
           WHERE student_id = '" . $student_id_current . "';";
 $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_array($result);
-$student_id = $row["student_fname"];
+$student_fname = $row["student_fname"];
 $student_email = $row["student_email"];
 $student_profile_image = $row["student_image"];
+$student_lname = $row["student_lname"];
+$student_num = $row["student_num"];
 
 ?>
 
@@ -70,28 +73,37 @@ $student_profile_image = $row["student_image"];
         <img src="./images/wip.jpg" alt="" width="50%" height="300px">
     </header> -->
     <main class="center">
-    <div class="profile-bubble">
-        <div class="profile-image">
-            <?php
-                echo "<img src=\"images/studentImages/" . $student_profile_image . "\">";
-            ?>
-        </div><br><br>
-        <div class="center">
-            <div class="profile-name">
+        <div  id="profile-content" class="profile-info small-bubble">
+            <br>
+            <div>
                 <?php
-                echo $student_id;
+                    if (isset($student_profile_image) ){
+                        echo "<img id=\"profile-img\" src=\"images/studentImages/" . $student_profile_image . "\">";
+                    } else{
+                        echo "<img id=\"profile-img\" src=\"images/profile.png\">";
+                    }
                 ?>
-            </div>
-            <div class="profile-email">
+            </div><br><br>
+            <div >
                 <?php
-                echo $student_email;
+                echo "Full Name: <br> <p>{$student_fname} {$student_lname}</p>";
                 ?>
-            </div>
+            </div><br>
+            <div>
+                <?php
+                    echo "Student Number: <br> <p>{$student_num}</p>";
+                ?>
+            </div><br>
+            <div>
+                <?php
+                echo "Email Address: <br> <p>{$student_email}</p>";
+                ?>
+            </div><br>
+
             <button class="profile-password">
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Show More</a>
-            </button>
-        </div>
-    </div>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Edit Details</a>
+            </button><br><br>
+        </div >
     </main>
 
     <footer>
