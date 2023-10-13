@@ -3,7 +3,6 @@
     require_once('conn.php');
 
     if(isset($_GET['id']) && isset($_GET['rating']) && isset($_GET['text'])) {
-        echo "hellow world";
         $reviewId = $_REQUEST['id'];
         $rating = $_REQUEST['rating'];
         $reviewText = $_REQUEST['text'];
@@ -26,14 +25,17 @@
         $result = mysqli_query($conn, $query);
 
         echo "<div id=\"review-popup\" class=\"center\">
-        <br><br><br>
-        <strong>
-            Your review has been edited and updated succesfully!
-            <br><br>
-            <a href=\"reviews.php\"><button style=\"width:10%; height:2em;\">OK</button></a>
-        </strong>
-        </div>";
+                    <br><br><br>
+                    <strong>
+                        Your review has been edited and updated succesfully!
+                  
+                        <br><br>
+                        <a href=\"reviews.php\"><button style=\"width:10%; height:2em;\">OK</button></a>
+                    </strong>
+                </div>";
     }
+    
+    mysqli_close($conn);
 ?>
 
 <!--Created in collaboration with:-->
@@ -122,4 +124,4 @@
         </div>
     </footer>
 </body>
-</html>
+</html> 

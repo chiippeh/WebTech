@@ -3,8 +3,9 @@
     require_once("BackendFiles/secure.php");
     require_once('conn.php');
     $student_num = $_SESSION['student_num'];
+    $student_id = $_SESSION['student_id'];
 
-    $query = "SELECT reviews.review_id, reviews.date, reviews.review_stuff, reviews.rating, students.student_fname, students.student_lname
+    $query = "SELECT reviews.review_id, reviews.date, reviews.review_stuff, reviews.rating, students.student_id, students.student_fname, students.student_lname
               FROM reviews
               JOIN students
               WHERE reviews.student_id = students.student_id";
@@ -100,20 +101,26 @@
                         echo "<div id=\"review-comment\">
                                     <strong>{$row['student_fname']}   {$row['student_lname']}  &nbsp | &nbsp {$row['rating']} stars </strong> 
                                     <div style=\"float:right;\">{$row['date']}</div> <br><br>
-                                    {$row['review_stuff']} 
-                                    <div id=\"edit-delete-container\">
+                                    {$row['review_stuff']}";
+                        if ($row['student_id'] == $student_id) {
+                            echo    "<div id=\"edit-delete-container\">
                                         <a href=\"editReview.php?id=" . $row['review_id'] . "&rating=" 
-                                                                      . $row['rating'] . "&text=" 
-                                                                      . $row['review_stuff'] . "\">
+                                                                    . $row['rating'] . "&text=" 
+                                                                    . $row['review_stuff'] . "\">
                                             <input type=\"button\" value=\"Edit\">
                                         </a>
                                         <a href=\"deleteReview.php?id=" . $row['review_id'] . "\">
-                                        <input type=\"button\" value=\"Delete\">
+                                        <input type=\"button\" value=\"Delete\" onClick=\"return confirm('Are you sure you want to delete?')\">
                                         </a>
                                     </div>
-                                    <br><br>
+                                    <br>
                                 </div>
                                 <br><br>";
+                        } else {
+                            echo " <br><br>
+                                   </div>
+                                   <br><br>";
+                        }
                     }
                 ?>
             </div>
