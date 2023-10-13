@@ -221,6 +221,16 @@ button.material-icons {
     font-size: calc(15px + 0.3vw);
 }
 
+.small-bubble {
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 4px 4px 5px #323232;
+    background:  #F2E6FF;
+    font-size: calc(15px + 0.3vw);
+    width: 50%;
+    margin: auto;
+}
+
 /* ----------------- curriculum.php ---------------------- */
     #slideshow-gallery-container  {  /* contains all elements */
         height: 30%;
@@ -629,6 +639,12 @@ footer {
 }
 
 /* ----------------- reviews.php ---------------------- */
+
+
+/* ----------------- profile.php ---------------------- */
+
+/* ----------------- profile.php ---------------------- */
+
 
 /*---------------------------------------------------------------------------------------------------------------------------------------------*/
 /* ----------------- psuedo---------------------- */
