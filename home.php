@@ -1,5 +1,4 @@
 <?php
-    // ob_start();
     session_start();
     
     $usernameErr = $passwordErr = "";
@@ -77,7 +76,8 @@
                 $result = mysqli_fetch_array($result);
                 $_SESSION['student_id'] = $result['student_id'];
                 $_SESSION['student_num'] = $result['student_num'];
-                header("Location: index.php");
+
+                header('Location: BackendFiles/log.php?id=' . $_SESSION['student_id'] . "&num=" . $_SESSION['student_num']);
                 exit();
             } else {
                 // echo "account does not exist";
