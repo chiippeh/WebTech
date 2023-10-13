@@ -669,7 +669,48 @@ footer {
 
 
 /* ----------------- profile.php ---------------------- */
+.profile-info {
+    text-align:center;
+}
+ 
 
+#profile-content p{
+    font-weight: bold;
+}
+
+#profile-img {
+    width:40%;
+    height:40%;
+    border-radius: 20%;
+    box-shadow: 6px 6px 7px rgb(176, 109, 179);
+}
+
+#profile-edit-logout {
+    display: flex;
+    justify-content: end;
+    gap: 0.5em;
+    padding: 0 2% 0 2%;
+}
+
+#profile-edit-logout a {
+    margin:auto;
+}
+
+#profile-edit-logout input {
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid rgb(176, 109, 179);
+    text-decoration: none;
+    text-align: center;
+    color: black;
+}
+
+#profile-edit-logout input:hover {
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgb(176, 109, 179);
+    color: white;
+}
 /* ----------------- profile.php ---------------------- */
 
 

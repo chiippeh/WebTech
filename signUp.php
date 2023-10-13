@@ -2,7 +2,7 @@
 
 $fname = $lname = $email = $password = $confirmPassword = "";
 // $nameRequiredErr = $surnameRequiredErr = $usernameRequiredErr =  $passwordRequiredErr = $emailRequiredErr = "";
-$nameErr = $surnameErr = $usernameErr = $passwordErr = $profileImageErr = $confirmPasswordErr = $emailErr = "";
+$nameErr = $surnameErr = $usernameErr = $passwordErr  = $confirmPasswordErr = $emailErr = "";
 $nameValid = $confirmImagesValid = $surnameValid = $usernameValid = $passwordValid = $confirmPasswordValid = $emailValid = false;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") { //if the submit button has been pressed
@@ -90,8 +90,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { //if the submit button has been pres
             $confirmPasswordErr = "* Confirm Password is invalid";
         }
     }
-    if (!empty($_POST["profile-image"])) {
-        $profileImageErr = "Image is required";
+    if (empty($_POST["profile-image"])) {
+        $confirmImagesValid = false;
     } else {
 
         $uploadedFiles = $_FILES['profile-image']['name'];
@@ -112,6 +112,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { //if the submit button has been pres
         $username = "g" . substr(date("Y"), 2) . strtolower(substr($lname, 0, 1)) . rand(1000, 9999);
         $query = "INSERT INTO students (`student_num`, `student_fname`, `student_lname`, `student_email`, `student_password`, `student_image`)
                       VALUES ('$username', '$fname', '$lname', '$email', '$encryptedPassword', '$file_name');";
+
+        $result = mysqli_query($conn, $query);
+        echo "<div id=\"success-popup\" class=\"center\">
+                    <br><br><br>
+                    <strong>
+                        You have successfully been signed up!
+                        <br>
+                        Your username is: {$username}
+                        <br><br>
+                        <a href=\"home.php?username=" . $username . "\"><button style=\"width:20%; height:2em;\">Login</button></a>
+                    </strong>
+                  </div>";
+    } else if ($nameValid && $surnameValid && $passwordValid && $confirmPasswordValid && $emailValid) {
+        // echo "<br>all inputs are valid<br>";
+        $encryptedPassword = sha1($password);
+        $username = "g" . substr(date("Y"), 2) . strtolower(substr($lname, 0, 1)) . rand(1000, 9999);
+        $query = "INSERT INTO students (`student_num`, `student_fname`, `student_lname`, `student_email`, `student_password`)
+                      VALUES ('$username', '$fname', '$lname', '$email', '$encryptedPassword');";
 
         $result = mysqli_query($conn, $query);
         echo "<div id=\"success-popup\" class=\"center\">
