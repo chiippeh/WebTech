@@ -196,7 +196,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { //if the submit button has been pres
                         ?>
                 </div>
                 <label for="profile-image">Add a profile Image:</label><br>
-                <input style="text-align:center" class="focus-input" type="file" id="profile-image" name="profile-image" required accept=".jpg, .png, .jpeg">
+                <input style="text-align:center" class="focus-input" type="file" id="profile-image" name="profile-image" accept=".jpg, .png, .jpeg">
                 <br><br>
 
                 <input type="submit" name="submit" id="submitBtn" value="Sign Up">
