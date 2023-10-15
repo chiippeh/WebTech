@@ -99,17 +99,9 @@ $student_num = $row["student_num"];
             </div><br>
             
             <div id="profile-edit-logout"> 
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><input type="button" value="Edit Details"></a>
                 <a  href="logOut.php"><input type="button" value="Log Out" onClick="return confirm('Are you sure you want to log out?')"></a>
             </div>
 
-            
-            <!-- <button class="button-styles" >
-                
-            </button>
-            <button  class="button-styles">
-                
-            </button> -->
             <br><br> 
         </div >
     </main>
