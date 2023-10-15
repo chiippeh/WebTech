@@ -48,7 +48,7 @@ $student_num = $row["student_num"];
             <span class="material-icons">psychology_alt</span>
             <p class="nav-btn-text">About Us</p>
         </a>
-        <a class="current-nav" href="./curriculum.php"> 
+        <a href="./curriculum.php"> 
             <span class="material-icons">library_books</span>
             <p class="nav-btn-text">Curriculum</p>
         </a>
