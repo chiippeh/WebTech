@@ -39,11 +39,11 @@
             <span class="material-icons">psychology_alt</span>
             <p class="nav-btn-text">About Us</p>
         </a>
-        <a class="current-nav" href="./curriculum.php"> 
+        <a href="./curriculum.php"> 
             <span class="material-icons">library_books</span>
             <p class="nav-btn-text">Curriculum</p>
         </a>
-        <a href="./bookings.php">
+        <a class="current-nav" href="./bookings.php">
             <span class="material-icons">list_alt</span>
             <p class="nav-btn-text">My Bookings</p>
         </a>

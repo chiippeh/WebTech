@@ -89,11 +89,6 @@
                 <br>
                 <p>Click <a href="./fees.php">here</a> for more details</p> 
             </div><br>
-            <div class="dashboard"> 
-                <p>Check out the WORK IN PROGRESS profile page</p>
-                <br>
-                <p>Let us know your thoughts -> <a href="profile.php">here</a></p> 
-            </div><br>
         </div>
     </main>
     

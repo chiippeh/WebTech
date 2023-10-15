@@ -28,7 +28,7 @@
     <nav>
         <img id="nav-home-logo" src="./images/hamrat_png_logo.png"></img>
         <a id="no-hover">
-           <button id="back-btn" class="material-icons">arrow_back </button>
+            <button id="back-btn" class="material-icons">arrow_back </button>
 
         </a>
         <a href="./index.php">
