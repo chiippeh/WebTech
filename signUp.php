@@ -90,7 +90,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { //if the submit button has been pres
             $confirmPasswordErr = "* Confirm Password is invalid";
         }
     }
-    if (empty($_POST["profile-image"])) {
+    if (empty($_FILES['profile-image']['name'])) {
         $confirmImagesValid = false;
     } else {
 

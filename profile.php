@@ -75,7 +75,7 @@ $student_num = $row["student_num"];
             <br>
             <div>
                 <?php
-                    if (isset($student_profile_image) ){
+                    if (isset($student_profile_image)){
                         echo "<img id=\"profile-img\" src=\"images/studentImages/" . $student_profile_image . "\">";
                     } else{
                         echo "<img id=\"profile-img\" src=\"images/profile.png\">";
